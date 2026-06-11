@@ -11,14 +11,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url('assets/chugoku/css/style.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/chugoku/css/logo.css') ?>">
 </head>
 <body data-lang="<?= esc($langCode ?? 'en') ?>">
   <?php $nav = $t['nav'] ?? []; $buttons = $t['buttons'] ?? []; $langCode = $langCode ?? 'en'; ?>
   <header class="topbar">
     <div class="container nav">
-      <a href="<?= site_url($langCode) ?>" class="logo" aria-label="Chugoku Paints Indonesia">
-        <span class="logo-mark">CMP</span>
-        <span class="logo-text">Chugoku Paints Indonesia<span>Affiliate Company</span></span>
+      <a href="<?= site_url($langCode) ?>" class="logo logo-image" aria-label="Chugoku Paints Indonesia">
+        <picture>
+          <source media="(max-width: 768px)" srcset="<?= base_url('assets/chugoku/img/logo-small.png') ?>">
+          <img src="<?= base_url('assets/chugoku/img/logo.png') ?>" alt="CMP Chugoku Paints Indonesia Worldwide CMP Group">
+        </picture>
       </a>
       <nav class="menu">
         <a href="#about"><?= esc($nav['about'] ?? 'About Us') ?></a>
