@@ -146,10 +146,18 @@ $img = static fn (string $name): string => base_url('assets/chugoku/img/' . $nam
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer corporate-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div><a class="logo" href="#top"><span class="logo-mark">CMP</span><span class="logo-text">Chugoku Paints Indonesia<span>Affiliate Company</span></span></a><p><?= esc($t['footer']['tagline']) ?></p></div>
+      <div class="footer-grid corporate-footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="logo logo-image footer-logo" aria-label="Chugoku Paints Indonesia">
+            <picture>
+              <source media="(max-width: 768px)" srcset="<?= base_url('assets/chugoku/img/logo-small.png') ?>">
+              <img src="<?= base_url('assets/chugoku/img/logo.png') ?>" alt="CMP Chugoku Paints Indonesia Worldwide CMP Group">
+            </picture>
+          </a>
+          <p><?= esc($t['footer']['tagline']) ?></p>
+        </div>
         <div><h4><?= esc($t['footer']['quickLinks']) ?></h4><a href="#about"><?= esc($t['nav']['about']) ?></a><a href="#products"><?= esc($t['nav']['products']) ?></a><a href="#solutions"><?= esc($t['nav']['solutions']) ?></a><a href="#projects"><?= esc($t['nav']['projects']) ?></a><a href="#news"><?= esc($t['nav']['news']) ?></a></div>
         <div><h4><?= esc($t['footer']['ourProducts']) ?></h4><?php foreach ($t['products'] as $product): ?><a><?= esc($product['title']) ?></a><?php endforeach ?></div>
         <div><h4><?= esc($t['footer']['sustainability']) ?></h4><a>Environment</a><a>Sustainability Approach</a><a>Responsible Care</a><a><?= esc($t['nav']['news']) ?></a></div>
