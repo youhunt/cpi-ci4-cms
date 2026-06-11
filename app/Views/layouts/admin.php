@@ -18,7 +18,7 @@
 <div class="admin-shell cms-admin-shell">
   <aside class="sidebar cms-sidebar">
     <a href="<?= site_url('admin') ?>" class="cms-brand">
-      <img src="<?= base_url('assets/chugoku/img/logo-small.png') ?>" alt="CMP">
+      <img src="<?= base_url('assets/chugoku/img/logo_small.png') ?>" alt="CMP">
       <span>Chugoku CMS<small>Admin Platform</small></span>
     </a>
     <nav class="admin-menu cms-menu">

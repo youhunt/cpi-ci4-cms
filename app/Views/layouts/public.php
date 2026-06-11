@@ -24,7 +24,7 @@
     <div class="container nav corporate-nav">
       <a href="<?= site_url($langCode) ?>" class="logo logo-image header-logo" aria-label="Chugoku Paints Indonesia">
         <picture>
-          <source media="(max-width: 768px)" srcset="<?= base_url('assets/chugoku/img/logo-small.png') ?>">
+          <source media="(max-width: 768px)" srcset="<?= base_url('assets/chugoku/img/logo_small.png') ?>">
           <img src="<?= base_url('assets/chugoku/img/logo.png') ?>" alt="CMP Chugoku Paints Indonesia Worldwide CMP Group">
         </picture>
       </a>
