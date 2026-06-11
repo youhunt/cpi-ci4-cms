@@ -81,34 +81,21 @@ $img = static fn (string $name): string => base_url('assets/chugoku/img/' . $nam
     </div>
   </section>
 
-  <section class="section" id="sustainability">
+  <section class="section" id="about">
     <div class="container">
       <div class="section-head fade-up">
-        <div><div class="kicker"><?= esc($t['platform']['kicker']) ?></div><h2><?= esc($t['platform']['title']) ?></h2></div>
-        <p class="section-desc"><?= esc($t['platform']['description']) ?></p>
+        <div><div class="kicker"><?= esc($t['aboutCompany']['kicker']) ?></div><h2><?= esc($t['aboutCompany']['title']) ?></h2></div>
+        <p class="section-desc"><?= esc($t['aboutCompany']['description']) ?></p>
       </div>
       <div class="value-grid">
-        <?php foreach ($t['platform']['cards'] as $card): ?>
+        <?php foreach ($t['aboutCompany']['cards'] as $card): ?>
           <div class="value-card fade-up"><div class="mini-icon"><?= esc($card['icon']) ?></div><h3><?= esc($card['title']) ?></h3><p><?= esc($card['text']) ?></p></div>
         <?php endforeach ?>
       </div>
     </div>
   </section>
 
-  <section class="section soft" id="about">
-    <div class="container">
-      <div class="section-head fade-up">
-        <div><div class="kicker"><?= esc($t['bilingual']['kicker']) ?></div><h2><?= esc($t['bilingual']['title']) ?></h2></div>
-        <p class="section-desc"><?= esc($t['bilingual']['description']) ?></p>
-      </div>
-      <div class="bilingual-grid">
-        <article class="language-card fade-up"><div class="kicker"><?= esc($t['bilingual']['leftKicker']) ?></div><h3><?= esc($t['bilingual']['leftTitle']) ?></h3><p><?= esc($t['bilingual']['leftText']) ?></p><div class="pill-row"><span class="pill active">EN</span><span class="pill">Products</span><span class="pill">Solutions</span><span class="pill">Projects</span></div></article>
-        <article class="language-card fade-up"><div class="kicker"><?= esc($t['bilingual']['rightKicker']) ?></div><h3><?= esc($t['bilingual']['rightTitle']) ?></h3><p><?= esc($t['bilingual']['rightText']) ?></p><div class="pill-row"><span class="pill active">ID</span><span class="pill">Produk</span><span class="pill">Solusi</span><span class="pill">Proyek</span></div></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="network">
+  <section class="section soft" id="network">
     <div class="container">
       <div class="section-head fade-up">
         <div><div class="kicker"><?= esc($t['network']['kicker']) ?></div><h2><?= esc($t['network']['title']) ?></h2></div>
