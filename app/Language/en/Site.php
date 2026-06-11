@@ -3,7 +3,7 @@
 return [
     'meta' => [
         'title' => 'PT. Chugoku Paints Indonesia | Marine & Industrial Coatings',
-        'description' => 'Modern corporate website demo with bilingual content, product showcase, project records, domestic network map, and inquiry form.',
+        'description' => 'Corporate website for PT. Chugoku Paints Indonesia featuring marine coatings, industrial coatings, protective coatings, flooring systems, projects, network, and product inquiry.',
     ],
     'nav' => [
         'about' => 'About Us',
@@ -67,41 +67,30 @@ return [
             ['title' => 'Infrastructure Protection', 'text' => 'Coating applications for concrete, columns, and infrastructure areas.', 'image' => 'product-protective.jpg', 'class' => ''],
         ],
     ],
-    'platform' => [
-        'kicker' => 'New Platform Direction',
-        'title' => 'Security, Communication, Visual Showcase & Network',
-        'description' => 'This demo section is prepared for meeting discussion to answer Mr. Miyaji’s direction: security, bilingual communication, decorative product/project content, domestic network map, and value-added platform ideas.',
+    'aboutCompany' => [
+        'kicker' => 'Corporate Profile',
+        'title' => 'Professional Coating Solutions for Marine, Industrial, and Infrastructure Needs',
+        'description' => 'PT. Chugoku Paints Indonesia is part of the Worldwide CMP Group, providing Japanese-quality coating products for asset protection, industrial operations, and project requirements in Indonesia.',
         'cards' => [
-            ['icon' => '🔒', 'title' => 'Security Improvement', 'text' => 'Modern framework, updated dependencies, protected admin area, CSRF protection, and cleaner application structure.'],
-            ['icon' => '🌐', 'title' => 'English + Bahasa', 'text' => 'Bilingual content structure to communicate better with domestic customers and international stakeholders.'],
-            ['icon' => '🖼️', 'title' => 'Product Visual', 'text' => 'Stronger product photos, application images, downloadable brochures, and catalog solution presentation.'],
-            ['icon' => '🏗️', 'title' => 'Project Records', 'text' => 'Project references and application records to show CPI capability across marine, industrial, and infrastructure sectors.'],
-            ['icon' => '📍', 'title' => 'Domestic Network', 'text' => 'Network map concept for office, distributor, project coverage, sales area, or customer support points in Indonesia.'],
+            ['icon' => '⚓', 'title' => 'Marine Coatings', 'text' => 'Paint and corrosion protection solutions for vessels, docks, offshore assets, and marine environments.'],
+            ['icon' => '🏭', 'title' => 'Industrial Protection', 'text' => 'Heavy duty coatings for industrial facilities, steel structures, tanks, pipes, and operational assets.'],
+            ['icon' => '🧪', 'title' => 'Technology & Quality', 'text' => 'Supported by CMP Group global experience, quality standards, and continuous product development.'],
+            ['icon' => '🧱', 'title' => 'Project Applications', 'text' => 'Application references for infrastructure, plants, flooring, and long-term asset protection needs.'],
+            ['icon' => '🤝', 'title' => 'Customer Support', 'text' => 'Product information, initial consultation, and inquiry support for customer requirements.'],
         ],
-    ],
-    'bilingual' => [
-        'kicker' => 'Bilingual Communication',
-        'title' => 'English + Bahasa Indonesia',
-        'description' => 'The new website can be prepared with bilingual content management so CPI can communicate clearly with local customers, sister companies, and international stakeholders.',
-        'leftKicker' => 'English Version',
-        'leftTitle' => 'High Performance Coating Solutions for Indonesia',
-        'leftText' => 'Chugoku Paints Indonesia provides reliable marine paints, heavy duty coatings, protective coatings, and flooring systems for industrial and infrastructure applications.',
-        'rightKicker' => 'Bahasa Indonesia Version',
-        'rightTitle' => 'Reliable Coating Solutions for Industrial Needs',
-        'rightText' => 'The same content structure can be managed in English and Bahasa Indonesia through CMS, so marketing, product, and project information remains consistent.',
     ],
     'network' => [
         'kicker' => 'Domestic Network',
-        'title' => 'Indonesia Network Map Concept',
-        'description' => 'The domestic network map can be used to display office, coverage area, project references, distributor, or customer support points according to Mr. Miyaji’s direction.',
+        'title' => 'Coverage and Support in Indonesia',
+        'description' => 'This section can display office information, support areas, project references, distributor points, or customer support points based on official company data.',
         'mapTitle' => 'Domestic Network & Coverage Area',
-        'mapText' => 'Interactive map concept for Jakarta office, industrial area coverage, distributor network, and project locations across Indonesia.',
-        'note' => 'Meeting Note: This map is a visual concept for demo. In production, this section can be implemented using Leaflet.js or Google Maps with real office, distributor, sales area, and project location data.',
+        'mapText' => 'Map concept for Jakarta office, industrial areas, distribution network, and project locations in Indonesia.',
+        'note' => 'Note: In production, this map can use official office, distributor, sales area, and project location data from PT. Chugoku Paints Indonesia.',
         'items' => [
             ['title' => 'Jakarta Office', 'text' => 'Corporate communication, product inquiry, customer relation, and administration support.'],
             ['title' => 'Industrial Area Coverage', 'text' => 'Support for manufacturing, infrastructure, marine, tank, pipe, and flooring coating applications.'],
             ['title' => 'Project References', 'text' => 'Showcase domestic project records to strengthen trust and customer understanding.'],
-            ['title' => 'Future Distributor Network', 'text' => 'Can be expanded into searchable distributor or sales area network in the next development phase.'],
+            ['title' => 'Distributor / Sales Network', 'text' => 'Can be expanded into distributor or sales area information based on official company data.'],
         ],
     ],
     'projects' => [
@@ -126,7 +115,7 @@ return [
     'inquiry' => [
         'kicker' => 'Contact & Inquiry',
         'title' => 'Make Product Inquiry Easier',
-        'description' => 'This inquiry form will be stored in CMS Admin so CPI team can review customer requests, product needs, and contact information more neatly.',
+        'description' => 'Customers can send product requirements, coating applications, and contact information through a clearer inquiry form.',
         'name' => 'Name / Company',
         'email' => 'Email',
         'phone' => 'Phone',
