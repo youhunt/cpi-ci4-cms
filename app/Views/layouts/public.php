@@ -12,18 +12,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url('assets/chugoku/css/style.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/chugoku/css/logo.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/chugoku/css/corporate.css') ?>">
 </head>
 <body data-lang="<?= esc($langCode ?? 'en') ?>">
   <?php $nav = $t['nav'] ?? []; $buttons = $t['buttons'] ?? []; $langCode = $langCode ?? 'en'; ?>
-  <header class="topbar">
-    <div class="container nav">
-      <a href="<?= site_url($langCode) ?>" class="logo logo-image" aria-label="Chugoku Paints Indonesia">
+  <header class="topbar site-header">
+    <div class="container nav corporate-nav">
+      <a href="<?= site_url($langCode) ?>" class="logo logo-image header-logo" aria-label="Chugoku Paints Indonesia">
         <picture>
           <source media="(max-width: 768px)" srcset="<?= base_url('assets/chugoku/img/logo-small.png') ?>">
           <img src="<?= base_url('assets/chugoku/img/logo.png') ?>" alt="CMP Chugoku Paints Indonesia Worldwide CMP Group">
         </picture>
       </a>
-      <nav class="menu">
+
+      <button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-menu" class="menu nav-menu">
         <a href="#about"><?= esc($nav['about'] ?? 'About Us') ?></a>
         <a href="#products"><?= esc($nav['products'] ?? 'Products') ?></a>
         <a href="#solutions"><?= esc($nav['solutions'] ?? 'Solutions') ?></a>
@@ -31,23 +37,27 @@
         <a href="#sustainability"><?= esc($nav['sustainability'] ?? 'Sustainability') ?></a>
         <a href="#news"><?= esc($nav['news'] ?? 'News') ?></a>
         <a href="#contact"><?= esc($nav['contact'] ?? 'Contact') ?></a>
-      </nav>
-      <div class="nav-actions">
-        <div class="lang">
-          <a href="<?= site_url('id') ?>" class="<?= $langCode === 'id' ? 'active' : '' ?>">ID</a>
-          <span>/</span>
-          <a href="<?= site_url('en') ?>" class="<?= $langCode === 'en' ? 'active' : '' ?>">EN</a>
+        <div class="mobile-panel-actions">
+          <div class="lang-switch">
+            <a href="<?= site_url('id') ?>" class="lang-item <?= $langCode === 'id' ? 'active' : '' ?>"><img src="<?= base_url('assets/chugoku/img/flag-id.svg') ?>" alt="Indonesia"><span>ID</span></a>
+            <a href="<?= site_url('en') ?>" class="lang-item <?= $langCode === 'en' ? 'active' : '' ?>"><img src="<?= base_url('assets/chugoku/img/flag-en.svg') ?>" alt="English"><span>EN</span></a>
+          </div>
+          <a href="#contact" class="btn dark"><?= esc($buttons['contact'] ?? 'Contact Us') ?></a>
         </div>
-        <a href="#contact" class="btn dark"><?= esc($buttons['contact'] ?? 'Contact Us') ?></a>
-        <button class="mobile-toggle" type="button" aria-label="Open menu">☰</button>
+      </nav>
+
+      <div class="nav-actions desktop-actions">
+        <div class="lang-switch">
+          <a href="<?= site_url('id') ?>" class="lang-item <?= $langCode === 'id' ? 'active' : '' ?>"><img src="<?= base_url('assets/chugoku/img/flag-id.svg') ?>" alt="Indonesia"><span>ID</span></a>
+          <a href="<?= site_url('en') ?>" class="lang-item <?= $langCode === 'en' ? 'active' : '' ?>"><img src="<?= base_url('assets/chugoku/img/flag-en.svg') ?>" alt="English"><span>EN</span></a>
+        </div>
+        <a href="#contact" class="btn dark contact-btn"><?= esc($buttons['contact'] ?? 'Contact Us') ?></a>
       </div>
     </div>
   </header>
 
   <?= $this->renderSection('content') ?>
 
-  <div class="float-social"><a href="#">f</a><a href="#">x</a><a href="#">in</a><a href="#">wa</a></div>
-  <a class="backtop" href="#top"><?= esc($buttons['backTop'] ?? 'Back To Top') ?> ↑</a>
   <script src="<?= base_url('assets/chugoku/js/app.js') ?>"></script>
 </body>
 </html>
