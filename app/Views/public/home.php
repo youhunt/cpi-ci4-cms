@@ -40,7 +40,7 @@ $img = static fn (string $name): string => base_url('assets/chugoku/img/' . $nam
     </div>
   </section>
 
-  <section class="section" id="products">
+  <section class="section" id="solutions">
     <div class="container solutions">
       <div class="solutions-intro fade-up">
         <div class="kicker"><?= esc($t['productsIntro']['kicker']) ?></div>
@@ -62,7 +62,7 @@ $img = static fn (string $name): string => base_url('assets/chugoku/img/' . $nam
     </div>
   </section>
 
-  <section class="section soft" id="solutions">
+  <section class="section soft" id="products">
     <div class="container">
       <div class="section-head fade-up">
         <div><div class="kicker"><?= esc($t['applications']['kicker']) ?></div><h2><?= esc($t['applications']['title']) ?></h2></div>
