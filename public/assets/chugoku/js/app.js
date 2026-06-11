@@ -1,19 +1,30 @@
 (function(){
-  const body = document.body;
-  const langButtons = document.querySelectorAll('[data-set-lang]');
-  langButtons.forEach(btn=>btn.addEventListener('click',()=>{
-    const lang = btn.getAttribute('data-set-lang');
-    body.setAttribute('data-lang', lang);
-    langButtons.forEach(b=>b.classList.toggle('active', b.getAttribute('data-set-lang')===lang));
-    localStorage.setItem('chugoku_lang', lang);
-  }));
-  const saved = localStorage.getItem('chugoku_lang') || 'en';
-  body.setAttribute('data-lang', saved);
-  langButtons.forEach(b=>b.classList.toggle('active', b.getAttribute('data-set-lang')===saved));
-
   const toggle = document.querySelector('.mobile-toggle');
   const nav = document.querySelector('.nav');
-  if(toggle && nav){ toggle.addEventListener('click',()=>nav.classList.toggle('open')); }
+  const menu = document.querySelector('.nav-menu');
+
+  function closeMenu(){
+    if(!nav || !toggle) return;
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+
+  if(toggle && nav){
+    toggle.addEventListener('click',()=>{
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('menu-open', open);
+    });
+  }
+
+  if(menu){
+    menu.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', closeMenu));
+  }
+
+  window.addEventListener('resize', () => {
+    if(window.innerWidth > 992) closeMenu();
+  });
 
   const io = new IntersectionObserver(entries=>{
     entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
@@ -23,7 +34,7 @@
   const forms = document.querySelectorAll('form[data-demo-form]');
   forms.forEach(form=>form.addEventListener('submit', e=>{
     e.preventDefault();
-    alert('Demo inquiry submitted. In CI4 version, this will be stored in CMS database and visible in Inquiry Inbox.');
+    alert('Thank you. Your inquiry has been received.');
     form.reset();
   }));
 })();
