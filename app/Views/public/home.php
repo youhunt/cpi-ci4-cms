@@ -163,7 +163,10 @@ $img = static fn (string $name): string => base_url('assets/chugoku/img/' . $nam
         <div><h4><?= esc($t['footer']['sustainability']) ?></h4><a>Environment</a><a>Sustainability Approach</a><a>Responsible Care</a><a><?= esc($t['nav']['news']) ?></a></div>
         <div><h4><?= esc($t['footer']['contactUs']) ?></h4><p><?= nl2br(esc($t['footer']['address'])) ?></p><p><?= nl2br(esc($t['footer']['contact'])) ?></p></div>
       </div>
-      <div class="footer-bottom"><span><?= esc($t['footer']['copyright']) ?></span><span><?= esc($t['footer']['privacy']) ?></span></div>
+      <div class="footer-bottom">
+        <span><?= esc($t['footer']['copyright']) ?></span>
+        <span class="footer-bottom-links"><a href="<?= site_url('admin') ?>" rel="nofollow">CMS Login</a><span><?= esc($t['footer']['privacy']) ?></span></span>
+      </div>
     </div>
   </footer>
 </main>
