@@ -62,6 +62,14 @@
 
   <?= $this->renderSection('content') ?>
 
+  <div class="cpi-social-dock" aria-label="Social media links">
+    <a class="facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+    <a class="twitter" href="#" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+    <a class="linkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+  </div>
+  <a class="cpi-whatsapp" href="https://wa.me/6281287833400" target="_blank" rel="noopener" aria-label="WhatsApp">☏</a>
+  <a class="cpi-backtop" href="#top" aria-label="Back to top"><span>⌃</span> Back To Top</a>
+
   <script src="<?= base_url('assets/chugoku/js/app.js') ?>"></script>
 </body>
 </html>
