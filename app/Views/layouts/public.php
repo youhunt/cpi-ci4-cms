@@ -38,7 +38,6 @@
         <a href="#products"><?= esc($nav['products'] ?? 'Products') ?></a>
         <a href="#solutions"><?= esc($nav['solutions'] ?? 'Solutions') ?></a>
         <a href="#projects"><?= esc($nav['projects'] ?? 'Projects') ?></a>
-        <a href="#sustainability"><?= esc($nav['sustainability'] ?? 'Sustainability') ?></a>
         <a href="#news"><?= esc($nav['news'] ?? 'News') ?></a>
         <a href="#contact"><?= esc($nav['contact'] ?? 'Contact') ?></a>
         <div class="mobile-panel-actions">
