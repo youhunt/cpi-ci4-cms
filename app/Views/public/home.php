@@ -4,6 +4,7 @@
 $hero = $t['hero'];
 $buttons = $t['buttons'];
 $img = static fn (string $name): string => base_url('assets/chugoku/img/' . $name);
+$conceptPreviewUrl = base_url('demo/cpi-director-concepts/index.html');
 ?>
 <main id="top">
   <section class="hero">
@@ -17,6 +18,7 @@ $img = static fn (string $name): string => base_url('assets/chugoku/img/' . $nam
         <div class="hero-buttons">
           <a href="#products" class="btn"><?= esc($buttons['viewProducts']) ?> →</a>
           <a href="#contact" class="btn light"><?= esc($buttons['productInquiry']) ?></a>
+          <a href="<?= $conceptPreviewUrl ?>" class="btn light" target="_blank" rel="noopener">Website Concept Preview</a>
         </div>
         <div class="hero-metrics">
           <div class="metric"><strong><?= esc($hero['metric1Number']) ?></strong><?= esc($hero['metric1Text']) ?></div>
@@ -164,7 +166,7 @@ $img = static fn (string $name): string => base_url('assets/chugoku/img/' . $nam
       </div>
       <div class="footer-bottom">
         <span><?= esc($t['footer']['copyright']) ?></span>
-        <span class="footer-bottom-links"><a href="<?= site_url('admin') ?>" rel="nofollow">CMS Login</a><span><?= esc($t['footer']['privacy']) ?></span></span>
+        <span class="footer-bottom-links"><a href="<?= $conceptPreviewUrl ?>" target="_blank" rel="noopener">Website Concept Preview</a><a href="<?= site_url('admin') ?>" rel="nofollow">CMS Login</a><span><?= esc($t['footer']['privacy']) ?></span></span>
       </div>
     </div>
   </footer>
