@@ -26,7 +26,7 @@ return [
         'backTop' => 'Kembali ke Atas',
     ],
     'hero' => [
-        'eyebrow' => 'www.chugoku-paints-indonesia.co.id',
+        'eyebrow' => 'www.chugoku.co.id',
         'title' => 'CHUGOKU Paints Indonesia',
         'description' => 'Solusi cat kapal, heavy duty coating, underwater coating, flooring system, dan proteksi aset industri.',
         'watermark' => "Underwater\nCoating",

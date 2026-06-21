@@ -26,7 +26,7 @@ return [
         'backTop' => 'Back To Top',
     ],
     'hero' => [
-        'eyebrow' => 'www.chugoku-paints-indonesia.co.id',
+        'eyebrow' => 'www.chugoku.co.id',
         'title' => 'CHUGOKU Paints Indonesia',
         'description' => 'Marine paints, heavy duty coatings, underwater coating, flooring systems, and industrial protection solutions.',
         'watermark' => "Underwater\nCoating",
