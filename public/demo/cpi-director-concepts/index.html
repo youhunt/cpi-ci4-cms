@@ -1,25 +1,1102 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CPI Website Concept Alternative - Director Demo</title>
-<style>
-:root{--navy:#061a3f;--blue:#0f6bff;--red:#e71f37;--green:#18b978;--orange:#ff8a00;--ink:#102033;--muted:#68758b;--bg:#f4f8fd;--line:rgba(7,31,77,.13);--shadow:0 24px 70px rgba(6,26,63,.16);--r:26px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 5%,rgba(15,107,255,.16),transparent 30%),radial-gradient(circle at 90% 8%,rgba(231,31,55,.12),transparent 28%),var(--bg);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink)}a{text-decoration:none;color:inherit}button,input,textarea,select{font:inherit}.container{width:min(1220px,calc(100% - 42px));margin:auto}.header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px}.mark{width:46px;height:46px;border-radius:15px;background:conic-gradient(from 215deg,var(--red),var(--red) 34%,#fff 34%,#fff 58%,#0a3b7e 58%,#0a3b7e 82%,var(--red) 82%);box-shadow:0 12px 26px rgba(231,31,55,.24)}.brand strong{display:block;color:#082a63;font-size:15px}.brand span span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.menu{display:flex;gap:22px;font-size:14px;font-weight:850;color:#173864}.menu a{padding:10px 0}.actions{display:flex;align-items:center;gap:10px}.lang{display:flex;gap:4px;border:1px solid #d9e7fb;background:#eef5ff;border-radius:999px;padding:5px}.lang button{border:0;background:transparent;border-radius:999px;padding:7px 10px;font-weight:900;color:#173864;cursor:pointer}.lang button.active{background:#0b3d84;color:white}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:13px 19px;font-weight:900;cursor:pointer;transition:.22s}.btn:hover{transform:translateY(-2px)}.btn-blue{background:linear-gradient(135deg,#0f6bff,#082a63);color:white;box-shadow:0 14px 28px rgba(15,107,255,.26)}.btn-red{background:linear-gradient(135deg,#ff3953,#c91227);color:white;box-shadow:0 14px 28px rgba(231,31,55,.25)}.btn-light{background:white;color:#0b3d84;box-shadow:var(--shadow)}.hero{position:relative;overflow:hidden;color:white;background:linear-gradient(115deg,rgba(6,26,63,.96),rgba(6,26,63,.78) 48%,rgba(6,26,63,.25)),radial-gradient(circle at 78% 24%,rgba(34,211,238,.45),transparent 21%),radial-gradient(circle at 87% 75%,rgba(231,31,55,.34),transparent 18%),linear-gradient(135deg,#071f4d,#0f6bff)}.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(90deg,transparent,#000 15%,#000 80%,transparent);opacity:.35}.hero-grid{position:relative;z-index:2;min-height:700px;display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center;padding:76px 0 110px}.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.14);backdrop-filter:blur(12px);border-radius:999px;padding:9px 14px;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.badge.dark{background:#eaf2ff;color:#0b3d84;border-color:#d5e6fb}.badge.red{background:#fff0f3;color:#c91227;border-color:#ffd5dc}h1{font-size:clamp(42px,6vw,84px);line-height:.9;letter-spacing:-.07em;margin:18px 0;text-transform:uppercase}h2{font-size:clamp(31px,4vw,56px);line-height:.98;letter-spacing:-.055em;color:#071f4d;margin:10px 0 0}.hero p{font-size:19px;line-height:1.7;max-width:650px;color:rgba(255,255,255,.84)}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}.panel{background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.09));border:1px solid rgba(255,255,255,.22);border-radius:var(--r);padding:18px;box-shadow:0 35px 90px rgba(0,0,0,.3);backdrop-filter:blur(20px)}.concept-btn{width:100%;display:grid;grid-template-columns:58px 1fr auto;gap:14px;align-items:center;text-align:left;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.10);color:white;border-radius:22px;padding:17px;margin-bottom:12px;cursor:pointer;transition:.22s}.concept-btn:hover,.concept-btn.active{background:rgba(255,255,255,.23);transform:translateX(5px)}.icon{width:58px;height:58px;border-radius:18px;background:white;color:#0b3d84;display:grid;place-items:center;font-size:25px}.concept-btn h3{margin:0}.concept-btn p{margin:5px 0 0;font-size:13px;line-height:1.45}.concept-btn b{opacity:.65;font-size:28px}.float{margin-top:-62px;position:relative;z-index:4}.stats{background:white;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:18px}.stat{background:linear-gradient(180deg,#fbfdff,#eef5fb);border-radius:20px;padding:20px;display:flex;gap:13px;align-items:center}.stat i{width:48px;height:48px;border-radius:16px;background:#eaf2ff;display:grid;place-items:center;font-style:normal;font-size:24px}.stat strong{font-size:29px;color:#082a63}.stat span{font-size:13px;color:var(--muted)}.section{padding:86px 0}.head{display:flex;justify-content:space-between;gap:32px;align-items:end;margin-bottom:32px}.copy{max-width:650px;color:var(--muted);line-height:1.75}.compare{display:grid;grid-template-columns:350px 1fr;gap:24px}.tabs{position:sticky;top:100px;background:white;border:1px solid var(--line);border-radius:var(--r);padding:14px;box-shadow:var(--shadow)}.tab{width:100%;border:0;background:transparent;text-align:left;border-radius:18px;padding:18px;display:flex;gap:13px;cursor:pointer;color:#173864}.tab span{font-size:28px}.tab strong{display:block}.tab small{display:block;margin-top:4px;color:inherit;opacity:.7}.tab.active{background:linear-gradient(135deg,var(--navy),var(--blue));color:white}.detail{display:none;background:white;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}.detail.active{display:block;animation:rise .28s ease}@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}.detail-hero{min-height:340px;padding:38px;display:grid;align-items:end;color:white;background:linear-gradient(135deg,#061a3f,#0f6bff);position:relative;overflow:hidden}.detail-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 30%,rgba(255,255,255,.22),transparent 20%),linear-gradient(90deg,rgba(6,26,63,.88),rgba(6,26,63,.28))}.detail-hero>*{position:relative}.detail-hero h3{font-size:44px;line-height:1;margin:10px 0}.detail-body{padding:30px}.pills{display:flex;gap:10px;flex-wrap:wrap}.pill{background:#edf4ff;color:#0b3d84;border-radius:999px;padding:9px 12px;font-size:13px;font-weight:900}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}.box{background:#f8fbff;border:1px solid var(--line);border-radius:19px;padding:20px}.box h4{color:#082a63;margin:0 0 12px}.box ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.7}.showcase{background:white}.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}.filter{border:1px solid var(--line);background:white;color:#123a75;border-radius:999px;padding:11px 15px;font-weight:900;cursor:pointer}.filter.active{background:#0b3d84;color:white}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:24px;box-shadow:0 14px 40px rgba(6,26,63,.1);overflow:hidden;transition:.25s;cursor:pointer}.card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}.visual{height:160px;background:linear-gradient(135deg,#0b3d84,#0f6bff);position:relative;overflow:hidden}.visual:before{content:"";position:absolute;inset:auto -20px -40px 35%;height:145px;border-radius:80px;background:rgba(255,255,255,.22)}.visual.red{background:linear-gradient(135deg,#7a1020,#e71f37)}.visual.green{background:linear-gradient(135deg,#0a5943,#19b978)}.visual.orange{background:linear-gradient(135deg,#7d4300,#ff8a00)}.visual:after{content:attr(data-label);position:absolute;left:18px;bottom:18px;color:white;font-weight:900;font-size:22px}.card-body{padding:20px}.card h3{margin:0 0 8px;color:#082a63}.card p{margin:0;color:var(--muted);line-height:1.55}.line{height:5px;background:linear-gradient(90deg,var(--red),var(--blue),var(--green),var(--orange))}.hidden{display:none!important}.demo{background:linear-gradient(135deg,var(--navy),#092b64);color:white}.demo h2{color:white}.demo-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:30px;align-items:center}.screen{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);border-radius:30px;padding:16px;box-shadow:0 35px 90px rgba(0,0,0,.32)}.browser{background:white;color:#102033;border-radius:22px;overflow:hidden}.top{height:42px;background:#f1f5fb;display:flex;gap:7px;align-items:center;padding:0 16px}.dot{width:10px;height:10px;border-radius:50%;background:#ff5a5f}.dot:nth-child(2){background:#ffbd2e}.dot:nth-child(3){background:#28c840}.body{padding:22px}.mock{height:190px;border-radius:20px;background:linear-gradient(135deg,#0b3d84,#0f6bff);color:white;padding:22px;display:flex;flex-direction:column;justify-content:end}.mock h3{font-size:30px;margin:8px 0}.mockgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.mockbox{height:84px;background:#eef5fb;border-radius:14px;color:#0b3d84;font-weight:900;padding:12px}.control{display:block;width:100%;margin-bottom:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:white;border-radius:18px;padding:17px;text-align:left;cursor:pointer}.control.active,.control:hover{background:rgba(255,255,255,.2)}.map-wrap{background:linear-gradient(180deg,#eef6ff,#fff)}.map-card{background:white;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);display:grid;grid-template-columns:1.25fr .75fr;gap:24px;padding:24px}.map{height:390px;border-radius:24px;position:relative;overflow:hidden;background:radial-gradient(circle at 25% 58%,#9cc6ed 0 4%,transparent 4.3%),radial-gradient(circle at 38% 55%,#9cc6ed 0 3.8%,transparent 4.1%),radial-gradient(circle at 50% 50%,#9cc6ed 0 5.6%,transparent 5.9%),radial-gradient(circle at 64% 48%,#9cc6ed 0 4%,transparent 4.3%),radial-gradient(circle at 78% 52%,#9cc6ed 0 4.8%,transparent 5.1%),linear-gradient(135deg,#e9f5ff,#f9fcff);border:1px solid #d9eafc}.map-title{position:absolute;left:22px;top:20px;color:#082a63}.pin{position:absolute;width:24px;height:24px;border-radius:50%;border:5px solid #fff;background:var(--red);box-shadow:0 10px 28px rgba(231,31,55,.35);cursor:pointer;animation:bounce 2s ease-in-out infinite}.pin:after{content:"";position:absolute;inset:-13px;border-radius:50%;border:2px solid currentColor;opacity:.2}.pin.blue{background:var(--blue);color:var(--blue)}.pin.green{background:var(--green);color:var(--green)}.pin.orange{background:var(--orange);color:var(--orange)}@keyframes bounce{50%{transform:translateY(-5px)}}.map-info{display:grid;gap:12px}.loc{background:#f8fbff;border:1px solid var(--line);border-radius:18px;padding:17px}.loc strong{color:#082a63}.loc p{color:var(--muted);line-height:1.55;margin:5px 0 0}.inquiry{background:linear-gradient(115deg,rgba(6,26,63,.95),rgba(6,26,63,.72)),radial-gradient(circle at 80% 25%,rgba(255,138,0,.35),transparent 20%),linear-gradient(135deg,#061a3f,#0f6bff);color:white}.inquiry h2{color:white}.inquiry-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}.form{background:white;color:var(--ink);border-radius:var(--r);box-shadow:var(--shadow);padding:26px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:12px;color:#0b3d84;font-weight:900}.field input,.field select,.field textarea{border:1px solid #dbe6f4;border-radius:14px;background:#f8fbff;padding:13px;outline:none;width:100%}.field input:focus,.field textarea:focus{box-shadow:0 0 0 4px rgba(15,107,255,.1);border-color:var(--blue)}.faq{display:grid;gap:12px}.faq-item{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden}.faq-q{width:100%;border:0;background:white;color:#082a63;padding:18px;text-align:left;font-weight:900;cursor:pointer;display:flex;justify-content:space-between}.faq-a{display:none;padding:0 18px 18px;color:var(--muted);line-height:1.7}.faq-item.open .faq-a{display:block}.footer{background:#061a3f;color:white;padding:50px 0 20px}.foot{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:28px}.footer p,.footer a{color:rgba(255,255,255,.72);line-height:1.7;font-size:14px}.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}.bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:18px;color:rgba(255,255,255,.55);display:flex;justify-content:space-between}.modal{position:fixed;inset:0;z-index:99;background:rgba(4,14,34,.68);display:none;align-items:center;justify-content:center;padding:22px}.modal.open{display:flex}.modal-box{background:white;border-radius:28px;max-width:760px;width:100%;box-shadow:0 40px 120px rgba(0,0,0,.35);overflow:hidden}.modal-head{background:linear-gradient(135deg,var(--navy),var(--blue));color:white;padding:24px;display:flex;justify-content:space-between;gap:20px}.modal-head h3{margin:0;font-size:28px}.modal-close{border:0;background:rgba(255,255,255,.16);color:white;border-radius:12px;width:42px;height:42px;cursor:pointer;font-size:24px}.modal-content{padding:24px}.modal-visual{height:230px;border-radius:20px;background:linear-gradient(135deg,#0b3d84,#0f6bff);display:flex;align-items:end;padding:24px;color:white;font-size:34px;font-weight:900}.modal-content p{color:var(--muted);line-height:1.75}.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.toast{position:fixed;right:22px;bottom:22px;background:var(--navy);color:white;border-radius:18px;padding:16px 18px;box-shadow:var(--shadow);display:none;z-index:120}.toast.show{display:block}.map-pop{position:fixed;z-index:100;background:white;border-radius:22px;box-shadow:var(--shadow);border:1px solid var(--line);padding:18px;max-width:330px;display:none}.map-pop.open{display:block}.map-pop h3{margin:0 0 8px;color:#082a63}.map-pop p{margin:0;color:var(--muted);line-height:1.6}.map-pop button{position:absolute;right:8px;top:8px;border:0;background:#eef5ff;border-radius:9px;width:28px;height:28px;cursor:pointer}@media(max-width:1020px){.menu{display:none}.hero-grid,.compare,.demo-layout,.map-card,.inquiry-grid{grid-template-columns:1fr}.tabs{position:static}.stats,.grid4{grid-template-columns:repeat(2,1fr)}.foot{grid-template-columns:1fr 1fr}}@media(max-width:640px){.container{width:calc(100% - 28px)}.actions .btn-red{display:none}.hero-grid{min-height:auto;padding:54px 0 92px}h1{font-size:42px}.stats,.grid3,.grid4,.mini-grid,.form-grid{grid-template-columns:1fr}.head{display:block}.foot{grid-template-columns:1fr}.bottom{display:grid;gap:8px}.brand span span{display:none}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CPI Director Website Concept Alternative</title>
+  <meta name="description" content="Elegant interactive website concept alternative for PT. Chugoku Paints Indonesia director meeting.">
+  <style>
+    :root {
+      --navy: #061832;
+      --navy-soft: #0b2f63;
+      --blue: #1667d9;
+      --red: #d91f35;
+      --teal: #1aa6a6;
+      --gold: #c9963c;
+      --ink: #142033;
+      --muted: #667389;
+      --paper: #f6f8fb;
+      --white: #ffffff;
+      --line: rgba(18, 36, 67, .12);
+      --shadow: 0 24px 70px rgba(6, 24, 50, .14);
+      --soft-shadow: 0 14px 36px rgba(6, 24, 50, .10);
+      --radius: 28px;
+      --radius-sm: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 2%, rgba(22, 103, 217, .12), transparent 28%),
+        radial-gradient(circle at 92% 4%, rgba(217, 31, 53, .09), transparent 26%),
+        linear-gradient(180deg, #f8fafc 0%, #eef3f8 50%, #ffffff 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+    .container { width: min(1180px, calc(100% - 44px)); margin: 0 auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(18, 36, 67, .08);
+      background: rgba(255, 255, 255, .86);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      min-width: 285px;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 15px;
+      background:
+        radial-gradient(circle at 52% 50%, #fff 0 29%, transparent 30%),
+        conic-gradient(from 220deg, var(--red), var(--red) 34%, #fff 34% 55%, var(--navy-soft) 55% 82%, var(--red) 82%);
+      box-shadow: 0 12px 28px rgba(217, 31, 53, .18);
+      flex: 0 0 auto;
+    }
+
+    .brand strong { display: block; color: var(--navy-soft); font-size: 14px; letter-spacing: .02em; }
+    .brand span span { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+
+    .menu { display: flex; align-items: center; gap: 24px; color: #25405f; font-size: 14px; font-weight: 760; }
+    .menu a { position: relative; padding: 10px 0; }
+    .menu a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: 4px;
+      height: 2px;
+      border-radius: 99px;
+      background: var(--red);
+      transition: .22s ease;
+    }
+    .menu a:hover::after { right: 0; }
+
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .lang-switch { display: flex; gap: 4px; padding: 5px; border: 1px solid #dce7f4; border-radius: 999px; background: #f2f6fb; }
+    .lang-switch button { border: 0; padding: 7px 10px; border-radius: 999px; color: #25405f; background: transparent; font-size: 12px; font-weight: 850; }
+    .lang-switch button.active { color: #fff; background: var(--navy-soft); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: 999px;
+      padding: 13px 18px;
+      font-weight: 820;
+      white-space: nowrap;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: #fff; background: linear-gradient(135deg, #155dc7, #092b5c); box-shadow: 0 16px 34px rgba(22, 103, 217, .22); }
+    .btn-red { color: #fff; background: linear-gradient(135deg, #e43a4f, #b51227); box-shadow: 0 16px 34px rgba(217, 31, 53, .18); }
+    .btn-soft { color: var(--navy-soft); background: #fff; box-shadow: var(--soft-shadow); border: 1px solid rgba(18, 36, 67, .08); }
+    .btn-outline { color: var(--navy-soft); background: transparent; border: 1px solid rgba(18, 36, 67, .16); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 720px;
+      color: #fff;
+      background:
+        linear-gradient(110deg, rgba(6, 24, 50, .97), rgba(7, 38, 83, .88) 44%, rgba(12, 62, 105, .34) 100%),
+        radial-gradient(circle at 82% 22%, rgba(92, 178, 255, .36), transparent 22%),
+        radial-gradient(circle at 84% 80%, rgba(217, 31, 53, .20), transparent 28%),
+        linear-gradient(135deg, #061832, #124a86 56%, #071f45);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(90deg, rgba(255, 255, 255, .055) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
+      background-size: 70px 70px;
+      mask-image: linear-gradient(90deg, transparent, black 16%, black 84%, transparent);
+      opacity: .5;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 620px;
+      height: 620px;
+      right: -210px;
+      bottom: -260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, .18), transparent 66%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      min-height: 720px;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 48px;
+      padding: 86px 0 118px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      width: fit-content;
+      padding: 9px 14px;
+      border: 1px solid rgba(255, 255, 255, .20);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, .88);
+      background: rgba(255, 255, 255, .10);
+      backdrop-filter: blur(14px);
+      font-size: 12px;
+      font-weight: 820;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .eyebrow.dark { color: #17406d; background: #eef5fd; border-color: #d9e7f5; }
+    .eyebrow.red { color: #b51227; background: #fff1f3; border-color: #ffd7dd; }
+
+    .hero-title {
+      max-width: 780px;
+      margin: 22px 0 20px;
+      font-size: clamp(44px, 6vw, 82px);
+      line-height: .94;
+      letter-spacing: -.065em;
+    }
+
+    .hero-copy {
+      max-width: 680px;
+      margin: 0;
+      color: rgba(255, 255, 255, .78);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 34px;
+      max-width: 650px;
+    }
+
+    .hero-metric {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, .15);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .08);
+      backdrop-filter: blur(16px);
+    }
+    .hero-metric strong { display: block; font-size: 25px; letter-spacing: -.04em; }
+    .hero-metric span { display: block; margin-top: 4px; color: rgba(255, 255, 255, .66); font-size: 13px; }
+
+    .concept-preview {
+      position: relative;
+      padding: 18px;
+      border-radius: 34px;
+      border: 1px solid rgba(255, 255, 255, .20);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .18), rgba(255, 255, 255, .08));
+      box-shadow: 0 35px 110px rgba(0, 0, 0, .28);
+      backdrop-filter: blur(22px);
+    }
+
+    .concept-window {
+      overflow: hidden;
+      border-radius: 26px;
+      color: var(--ink);
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .18);
+    }
+
+    .window-top { height: 43px; display: flex; align-items: center; gap: 8px; padding: 0 16px; background: #f0f4f9; border-bottom: 1px solid #e2e9f2; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; }
+    .dot:nth-child(2) { background: #ffbd2e; }
+    .dot:nth-child(3) { background: #28c840; }
+
+    .window-body { padding: 18px; }
+    .mock-hero {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-radius: 22px;
+      padding: 22px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(255, 255, 255, .28), transparent 22%),
+        linear-gradient(135deg, #092b5c, #155dc7);
+      transition: background .25s ease;
+    }
+    .mock-hero small { opacity: .78; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .mock-hero h3 { margin: 8px 0 0; font-size: 30px; line-height: 1.02; letter-spacing: -.04em; }
+    .mock-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+    .mock-card { min-height: 88px; border-radius: 18px; padding: 13px; color: #12365e; background: #eef5fb; font-size: 12px; font-weight: 850; }
+
+    .concept-selector { display: grid; gap: 11px; margin-top: 14px; }
+    .concept-chip {
+      display: grid;
+      grid-template-columns: 46px 1fr auto;
+      align-items: center;
+      gap: 13px;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 20px;
+      padding: 13px;
+      color: #fff;
+      background: rgba(255, 255, 255, .09);
+      text-align: left;
+      transition: .22s ease;
+    }
+    .concept-chip:hover, .concept-chip.active { transform: translateX(4px); background: rgba(255, 255, 255, .18); border-color: rgba(255, 255, 255, .30); }
+    .concept-chip i { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 16px; background: #fff; color: var(--navy-soft); font-style: normal; font-size: 21px; }
+    .concept-chip strong { display: block; font-size: 14px; }
+    .concept-chip span { display: block; margin-top: 3px; color: rgba(255, 255, 255, .66); font-size: 12px; }
+    .concept-chip b { color: rgba(255, 255, 255, .56); }
+
+    .section { padding: 92px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 38px; margin-bottom: 34px; }
+    .section-title { max-width: 720px; margin: 12px 0 0; color: #071f45; font-size: clamp(32px, 4vw, 56px); line-height: 1.02; letter-spacing: -.055em; }
+    .section-copy { max-width: 650px; margin: 0; color: var(--muted); line-height: 1.75; }
+
+    .three-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .direction-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 360px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .92);
+      box-shadow: var(--soft-shadow);
+      transition: .25s ease;
+    }
+    .direction-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .direction-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -90px -120px auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: rgba(22, 103, 217, .10);
+    }
+    .direction-card.red::before { background: rgba(217, 31, 53, .10); }
+    .direction-card.teal::before { background: rgba(26, 166, 166, .12); }
+    .direction-no { display: inline-flex; width: 42px; height: 42px; align-items: center; justify-content: center; border-radius: 14px; color: #fff; background: var(--navy-soft); font-weight: 900; }
+    .direction-card.red .direction-no { background: var(--red); }
+    .direction-card.teal .direction-no { background: var(--teal); }
+    .direction-card h3 { margin: 24px 0 10px; color: #082a63; font-size: 26px; letter-spacing: -.035em; }
+    .direction-card p { color: var(--muted); line-height: 1.65; }
+    .direction-list { margin: 22px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; color: #32445c; font-size: 14px; }
+    .direction-list li { display: flex; gap: 10px; align-items: flex-start; }
+    .direction-list li::before { content: ""; width: 8px; height: 8px; margin-top: 7px; border-radius: 50%; background: var(--blue); flex: 0 0 auto; }
+    .red .direction-list li::before { background: var(--red); }
+    .teal .direction-list li::before { background: var(--teal); }
+
+    .compare-wrap { display: grid; grid-template-columns: 340px 1fr; gap: 24px; align-items: start; }
+    .compare-tabs { position: sticky; top: 98px; padding: 14px; border-radius: var(--radius); border: 1px solid var(--line); background: #fff; box-shadow: var(--soft-shadow); }
+    .compare-tab {
+      width: 100%;
+      display: flex;
+      gap: 13px;
+      align-items: flex-start;
+      border: 0;
+      border-radius: 18px;
+      padding: 17px;
+      text-align: left;
+      color: #24405f;
+      background: transparent;
+      transition: .2s ease;
+    }
+    .compare-tab.active { color: #fff; background: linear-gradient(135deg, #092b5c, #155dc7); }
+    .compare-tab i { font-style: normal; font-size: 24px; }
+    .compare-tab strong { display: block; }
+    .compare-tab small { display: block; margin-top: 4px; opacity: .72; line-height: 1.35; }
+
+    .compare-panel {
+      display: none;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+    .compare-panel.active { display: block; animation: rise .25s ease; }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+    .panel-hero {
+      position: relative;
+      min-height: 310px;
+      display: grid;
+      align-items: end;
+      padding: 36px;
+      color: #fff;
+      background: linear-gradient(135deg, #071f45, #1667d9);
+      overflow: hidden;
+    }
+    .panel-hero.product { background: linear-gradient(135deg, #071f45, #d91f35); }
+    .panel-hero.service { background: linear-gradient(135deg, #071f45, #1aa6a6); }
+    .panel-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 82% 28%, rgba(255, 255, 255, .22), transparent 24%),
+        linear-gradient(90deg, rgba(6, 24, 50, .76), transparent 68%);
+    }
+    .panel-hero > * { position: relative; }
+    .panel-hero h3 { max-width: 620px; margin: 12px 0 0; font-size: clamp(30px, 4vw, 48px); line-height: 1; letter-spacing: -.05em; }
+    .panel-body { padding: 30px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill { padding: 9px 12px; border-radius: 999px; color: #17406d; background: #eef5fd; font-size: 13px; font-weight: 820; }
+    .pros-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
+    .mini-box { padding: 20px; border-radius: 20px; border: 1px solid var(--line); background: #f9fbfe; }
+    .mini-box h4 { margin: 0 0 12px; color: #082a63; }
+    .mini-box ul { margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.7; }
+
+    .demo-section { color: #fff; background: linear-gradient(135deg, #061832, #0b2f63); }
+    .demo-section .section-title { color: #fff; }
+    .demo-section .section-copy { color: rgba(255, 255, 255, .70); }
+    .demo-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 32px; align-items: center; }
+    .demo-controls { display: grid; gap: 12px; margin-top: 24px; }
+    .demo-control { padding: 18px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, .18); color: #fff; background: rgba(255, 255, 255, .08); text-align: left; transition: .2s ease; }
+    .demo-control.active, .demo-control:hover { background: rgba(255, 255, 255, .16); transform: translateX(4px); }
+    .demo-control strong { display: block; }
+    .demo-control small { display: block; margin-top: 5px; color: rgba(255, 255, 255, .66); }
+
+    .demo-browser { padding: 16px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, .18); background: rgba(255, 255, 255, .08); box-shadow: 0 35px 90px rgba(0, 0, 0, .22); }
+    .browser-inner { overflow: hidden; border-radius: 22px; background: #fff; color: var(--ink); }
+    .browser-body { padding: 22px; }
+    .preview-block { min-height: 205px; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; border-radius: 22px; color: #fff; background: linear-gradient(135deg, #0b2f63, #1667d9); transition: .25s ease; }
+    .preview-block small { font-weight: 860; letter-spacing: .08em; text-transform: uppercase; opacity: .78; }
+    .preview-block h3 { margin: 8px 0 0; font-size: 30px; line-height: 1.05; letter-spacing: -.04em; }
+    .preview-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+    .preview-card { min-height: 86px; padding: 12px; border-radius: 16px; color: #17406d; background: #eef5fd; font-size: 12px; font-weight: 850; }
+
+    .products { background: #fff; }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+    .filter-btn { padding: 11px 15px; border-radius: 999px; border: 1px solid var(--line); color: #17406d; background: #fff; font-weight: 820; transition: .2s ease; }
+    .filter-btn.active { color: #fff; background: var(--navy-soft); }
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .product-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: var(--soft-shadow);
+      transition: .25s ease;
+      text-align: left;
+    }
+    .product-card:hover { transform: translateY(-7px); box-shadow: var(--shadow); }
+    .product-visual { position: relative; height: 160px; overflow: hidden; background: linear-gradient(135deg, #092b5c, #1667d9); }
+    .product-visual.red { background: linear-gradient(135deg, #6d1421, #d91f35); }
+    .product-visual.teal { background: linear-gradient(135deg, #0f4d55, #1aa6a6); }
+    .product-visual.gold { background: linear-gradient(135deg, #6d4518, #c9963c); }
+    .product-visual::before { content: ""; position: absolute; right: -28px; bottom: -42px; width: 170px; height: 170px; border-radius: 50%; background: rgba(255, 255, 255, .20); }
+    .product-visual::after { content: attr(data-label); position: absolute; left: 18px; bottom: 18px; color: #fff; font-size: 24px; font-weight: 900; letter-spacing: -.03em; }
+    .product-line { height: 4px; background: linear-gradient(90deg, var(--red), var(--blue), var(--teal), var(--gold)); }
+    .product-body { padding: 20px; }
+    .product-body h3 { margin: 0 0 8px; color: #082a63; font-size: 20px; letter-spacing: -.03em; }
+    .product-body p { margin: 0; color: var(--muted); line-height: 1.55; }
+    .is-hidden { display: none !important; }
+
+    .network { background: linear-gradient(180deg, #eef5fd, #ffffff); }
+    .network-card { display: grid; grid-template-columns: 1.25fr .75fr; gap: 24px; padding: 24px; border-radius: var(--radius); border: 1px solid var(--line); background: #fff; box-shadow: var(--shadow); }
+    .map {
+      position: relative;
+      min-height: 410px;
+      overflow: hidden;
+      border: 1px solid #d9e7f5;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 24% 57%, #abcbe8 0 4.2%, transparent 4.5%),
+        radial-gradient(circle at 37% 56%, #abcbe8 0 3.8%, transparent 4.1%),
+        radial-gradient(circle at 49% 51%, #abcbe8 0 5.4%, transparent 5.7%),
+        radial-gradient(circle at 63% 48%, #abcbe8 0 4.2%, transparent 4.5%),
+        radial-gradient(circle at 78% 52%, #abcbe8 0 4.8%, transparent 5.1%),
+        linear-gradient(135deg, #e8f3fc, #f9fcff);
+    }
+    .map-title { position: absolute; left: 22px; top: 22px; color: #082a63; }
+    .map-title strong { display: block; }
+    .map-title small { color: var(--muted); }
+    .pin { position: absolute; width: 24px; height: 24px; border: 5px solid #fff; border-radius: 50%; background: var(--red); box-shadow: 0 10px 28px rgba(217, 31, 53, .28); animation: floatPin 2.4s ease-in-out infinite; }
+    .pin::after { content: ""; position: absolute; inset: -14px; border: 2px solid currentColor; border-radius: 50%; opacity: .18; }
+    .pin.blue { color: var(--blue); background: var(--blue); }
+    .pin.teal { color: var(--teal); background: var(--teal); }
+    .pin.gold { color: var(--gold); background: var(--gold); }
+    @keyframes floatPin { 50% { transform: translateY(-5px); } }
+    .network-list { display: grid; gap: 12px; }
+    .network-item { padding: 18px; border: 1px solid var(--line); border-radius: 20px; background: #f9fbfe; }
+    .network-item strong { display: block; color: #082a63; }
+    .network-item p { margin: 6px 0 0; color: var(--muted); line-height: 1.6; }
+
+    .recommendation { background: #fff; }
+    .recommend-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr .85fr;
+      gap: 28px;
+      align-items: center;
+      padding: 34px;
+      border-radius: 34px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 92% 10%, rgba(255, 255, 255, .18), transparent 20%),
+        linear-gradient(135deg, #061832, #0b2f63 60%, #123d70);
+      box-shadow: var(--shadow);
+    }
+    .recommend-card h2 { color: #fff; }
+    .recommend-card p { color: rgba(255, 255, 255, .72); line-height: 1.75; }
+    .recommend-list { display: grid; gap: 12px; }
+    .recommend-item { padding: 16px; border-radius: 18px; border: 1px solid rgba(255, 255, 255, .14); background: rgba(255, 255, 255, .08); }
+    .recommend-item strong { display: block; }
+    .recommend-item span { display: block; margin-top: 4px; color: rgba(255, 255, 255, .64); font-size: 13px; }
+
+    .inquiry { color: #fff; background:
+      radial-gradient(circle at 80% 20%, rgba(201, 150, 60, .26), transparent 24%),
+      linear-gradient(135deg, #061832, #0b2f63);
+    }
+    .inquiry .section-title { color: #fff; }
+    .inquiry .section-copy { color: rgba(255, 255, 255, .70); }
+    .inquiry-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 30px; align-items: start; }
+    .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+    .process { padding: 18px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, .15); background: rgba(255, 255, 255, .08); }
+    .process strong { display: block; }
+    .process span { display: block; margin-top: 6px; color: rgba(255, 255, 255, .62); font-size: 13px; line-height: 1.5; }
+    .form-card { padding: 26px; border-radius: var(--radius); color: var(--ink); background: #fff; box-shadow: var(--shadow); }
+    .form-card h3 { margin: 0 0 18px; color: #082a63; font-size: 28px; letter-spacing: -.04em; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field { display: grid; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { color: #17406d; font-size: 12px; font-weight: 850; }
+    .field input, .field textarea, .field select { width: 100%; padding: 13px; border: 1px solid #dce7f4; border-radius: 14px; outline: none; background: #f8fbfe; }
+    .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(22, 103, 217, .10); }
+
+    .faq-list { display: grid; gap: 12px; }
+    .faq-item { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+    .faq-q { display: flex; justify-content: space-between; width: 100%; border: 0; padding: 18px; color: #082a63; background: #fff; text-align: left; font-weight: 850; }
+    .faq-a { display: none; padding: 0 18px 18px; color: var(--muted); line-height: 1.7; }
+    .faq-item.open .faq-a { display: block; }
+
+    .footer { padding: 48px 0 22px; color: #fff; background: var(--navy); }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 28px; }
+    .footer h4 { margin: 0 0 14px; }
+    .footer p, .footer a, .footer li { color: rgba(255, 255, 255, .68); line-height: 1.7; font-size: 14px; }
+    .footer ul { display: grid; gap: 7px; list-style: none; padding: 0; margin: 0; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 16px; margin-top: 30px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, .12); color: rgba(255, 255, 255, .52); font-size: 13px; }
+
+    .modal { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; padding: 22px; background: rgba(4, 14, 34, .66); }
+    .modal.open { display: flex; }
+    .modal-box { width: min(760px, 100%); overflow: hidden; border-radius: 30px; background: #fff; box-shadow: 0 40px 120px rgba(0, 0, 0, .34); }
+    .modal-head { display: flex; justify-content: space-between; gap: 16px; padding: 24px; color: #fff; background: linear-gradient(135deg, #061832, #1667d9); }
+    .modal-head h3 { margin: 0; font-size: 28px; line-height: 1.1; letter-spacing: -.04em; }
+    .modal-close { width: 42px; height: 42px; border: 0; border-radius: 12px; color: #fff; background: rgba(255, 255, 255, .14); font-size: 24px; }
+    .modal-content { padding: 24px; }
+    .modal-visual { min-height: 220px; display: flex; align-items: flex-end; padding: 24px; border-radius: 22px; color: #fff; background: linear-gradient(135deg, #092b5c, #1667d9); font-size: 34px; font-weight: 900; letter-spacing: -.04em; }
+    .modal-content p { color: var(--muted); line-height: 1.75; }
+    .modal-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+
+    .map-pop { position: fixed; z-index: 101; display: none; width: min(330px, calc(100% - 34px)); padding: 18px; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: var(--shadow); }
+    .map-pop.open { display: block; }
+    .map-pop button { position: absolute; right: 8px; top: 8px; width: 28px; height: 28px; border: 0; border-radius: 9px; background: #eef5fd; }
+    .map-pop h3 { margin: 0 0 8px; color: #082a63; }
+    .map-pop p { margin: 0; color: var(--muted); line-height: 1.6; }
+
+    .toast { position: fixed; right: 22px; bottom: 22px; z-index: 120; display: none; padding: 16px 18px; border-radius: 18px; color: #fff; background: var(--navy); box-shadow: var(--shadow); }
+    .toast.show { display: block; animation: rise .22s ease; }
+
+    @media (max-width: 1020px) {
+      .menu { display: none; }
+      .hero-grid, .compare-wrap, .demo-layout, .network-card, .recommend-card, .inquiry-grid { grid-template-columns: 1fr; }
+      .compare-tabs { position: static; }
+      .three-cards, .product-grid, .stats { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: calc(100% - 28px); }
+      .brand { min-width: auto; }
+      .brand span span { display: none; }
+      .nav-actions .btn-red { display: none; }
+      .hero, .hero-grid { min-height: auto; }
+      .hero-grid { padding: 56px 0 96px; }
+      .hero-title { font-size: 43px; }
+      .hero-metrics, .three-cards, .product-grid, .stats, .pros-grid, .process-grid, .preview-cards, .form-grid { grid-template-columns: 1fr; }
+      .section { padding: 66px 0; }
+      .section-head { display: block; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { display: grid; }
+    }
+  </style>
 </head>
 <body>
-<header class="header"><div class="container nav"><a class="brand" href="#top"><span class="mark"></span><span><strong>PT. CHUGOKU PAINTS INDONESIA</strong><span>Alternative interactive concept</span></span></a><nav class="menu"><a href="#concepts">Concepts</a><a href="#live">Live Demo</a><a href="#products">Products</a><a href="#network">Network</a><a href="#inquiry">Inquiry</a></nav><div class="actions"><div class="lang"><button type="button" class="active" data-lang="id">ID</button><button type="button" data-lang="en">EN</button></div><a class="btn btn-red" href="#inquiry">Contact Us</a></div></div></header>
-<main id="top"><section class="hero"><div class="container hero-grid"><div><span class="badge">● Director Meeting Alternative Demo</span><h1 data-i18n="heroTitle">3 Arah Website Baru CPI</h1><p data-i18n="heroSub">Prototype HTML modern, berwarna, lebih rame, dan clickable untuk membandingkan konsep identitas perusahaan, produk, dan layanan pelanggan.</p><div class="hero-actions"><a class="btn btn-blue" href="#concepts">Explore Concepts →</a><a class="btn btn-light" href="#products">Try Product Popup</a></div></div><aside class="panel"><button type="button" class="concept-btn active" data-concept="corporate"><span class="icon">🌐</span><span><h3>Corporate Identity</h3><p>Global network, heritage, trust.</p></span><b>A</b></button><button type="button" class="concept-btn" data-concept="products"><span class="icon">🎨</span><span><h3>Product Focused</h3><p>Catalog, application, brochures.</p></span><b>B</b></button><button type="button" class="concept-btn" data-concept="services"><span class="icon">🛠</span><span><h3>Service Focused</h3><p>Inquiry, support, follow-up.</p></span><b>C</b></button></aside></div></section>
-<div class="float"><div class="container stats"><div class="stat"><i>🏭</i><div><strong>107+</strong><span>Years heritage</span></div></div><div class="stat"><i>🌎</i><div><strong>15+</strong><span>Group companies</span></div></div><div class="stat"><i>🧪</i><div><strong>R&D</strong><span>Japanese technology</span></div></div><div class="stat"><i>🛡</i><div><strong>B2B</strong><span>Industrial coating</span></div></div></div></div>
-<section class="section" id="concepts"><div class="container"><div class="head"><div><span class="badge dark">3 Website Concepts</span><h2>Pilih arah website yang paling pas</h2></div><p class="copy">Klik konsep di kiri. Setiap konsep menunjukkan fokus, fitur utama, kelebihan, dan catatan untuk meeting direktur.</p></div><div class="compare"><div class="tabs"><button type="button" class="tab active" data-concept="corporate"><span>🌐</span><div><strong>Corporate Identity</strong><small>Jaringan global, reputasi, trust.</small></div></button><button type="button" class="tab" data-concept="products"><span>🎨</span><div><strong>Product Focused</strong><small>Katalog produk dan aplikasi.</small></div></button><button type="button" class="tab" data-concept="services"><span>🛠</span><div><strong>Service Focused</strong><small>Inquiry dan customer support.</small></div></button></div><article class="detail active" data-concept-panel="corporate"><div class="detail-hero"><span class="badge">Concept A</span><h3>Corporate Identity & Global Network</h3><p>Menonjolkan CPI sebagai bagian dari jaringan global Chugoku Marine Paints Group.</p></div><div class="detail-body"><div class="pills"><span class="pill">Company Profile</span><span class="pill">Global Network</span><span class="pill">Domestic Map</span><span class="pill">Project Records</span></div><div class="mini-grid"><div class="box"><h4>Kelebihan</h4><ul><li>Paling corporate dan profesional</li><li>Kuat untuk HO Jepang</li><li>Menaikkan trust customer besar</li></ul></div><div class="box"><h4>Catatan</h4><ul><li>Produk perlu halaman khusus</li><li>Lebih terasa company profile</li></ul></div></div></div></article><article class="detail" data-concept-panel="products"><div class="detail-hero" style="background:linear-gradient(135deg,#082a63,#18b978)"><span class="badge">Concept B</span><h3>Product-Focused Website</h3><p>Menjadikan website sebagai katalog digital produk coating dan aplikasi industri.</p></div><div class="detail-body"><div class="pills"><span class="pill">Product Catalog</span><span class="pill">Brochure</span><span class="pill">TDS/SDS</span><span class="pill">SEO Product</span></div><div class="mini-grid"><div class="box"><h4>Kelebihan</h4><ul><li>Mendukung sales</li><li>Customer mudah cari produk</li><li>Bagus untuk SEO</li></ul></div><div class="box"><h4>Catatan</h4><ul><li>Butuh data produk rapi</li><li>Corporate story jangan hilang</li></ul></div></div></div></article><article class="detail" data-concept-panel="services"><div class="detail-hero" style="background:linear-gradient(135deg,#061a3f,#ff8a00)"><span class="badge">Concept C</span><h3>Service & Customer Communication</h3><p>Menonjolkan inquiry, technical consultation, project support, dan follow-up pelanggan.</p></div><div class="detail-body"><div class="pills"><span class="pill">Inquiry Form</span><span class="pill">Technical Support</span><span class="pill">CRM Ready</span><span class="pill">Network Map</span></div><div class="mini-grid"><div class="box"><h4>Kelebihan</h4><ul><li>Paling komunikatif</li><li>Menjawab kebutuhan customer</li><li>Bisa menjadi lead generation</li></ul></div><div class="box"><h4>Catatan</h4><ul><li>Perlu SOP follow-up</li><li>Inquiry harus dikelola admin</li></ul></div></div></div></article></div></div></section>
-<section class="section demo" id="live"><div class="container demo-layout"><div><span class="badge">Live Homepage Simulation</span><h2>Klik dan lihat pesan hero berubah</h2><p class="copy" style="color:rgba(255,255,255,.75)">Simulasi ini memperlihatkan arah komunikasi website sesuai konsep yang dipilih.</p><button type="button" class="control active" data-mock="corporate"><strong>Corporate Identity</strong><br><small>Global quality, network, company trust.</small></button><button type="button" class="control" data-mock="products"><strong>Product Focused</strong><br><small>Product categories, brochure, application.</small></button><button type="button" class="control" data-mock="services"><strong>Service Focused</strong><br><small>Inquiry, consultation, customer support.</small></button></div><div class="screen"><div class="browser"><div class="top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="body"><div class="mock"><span class="badge">PT. Chugoku Paints Indonesia</span><h3 id="mock-title">Global Quality. Local Commitment.</h3></div><div class="mockgrid"><div class="mockbox">Company Profile</div><div class="mockbox">Global Network</div><div class="mockbox">Project Records</div></div></div></div></div></div></section>
-<section class="section showcase" id="products"><div class="container"><div class="head"><div><span class="badge dark">Clickable Product Popup</span><h2>Product showcase lebih rame</h2></div><p class="copy">Klik kartu produk untuk membuka popup detail. Filter kategori juga sudah aktif.</p></div><div class="filters"><button type="button" class="filter active" data-filter="all">All</button><button type="button" class="filter" data-filter="marine">Marine</button><button type="button" class="filter" data-filter="industrial">Industrial</button><button type="button" class="filter" data-filter="flooring">Flooring</button></div><div class="grid4"><article class="card product" data-cat="marine" data-color="blue" data-title="Marine Paints" data-desc="Antifouling, topcoat, and coating system for vessel protection in marine environments."><div class="line"></div><div class="visual" data-label="Marine"></div><div class="card-body"><h3>Marine Paints</h3><p>Protection for ships and offshore application.</p></div></article><article class="card product" data-cat="industrial" data-color="red" data-title="Tank Coatings" data-desc="Chemical resistant lining and coating system for industrial storage tanks."><div class="line"></div><div class="visual red" data-label="Tank"></div><div class="card-body"><h3>Tank Coatings</h3><p>Chemical resistant protection for storage tanks.</p></div></article><article class="card product" data-cat="industrial" data-color="green" data-title="Pipe Protection" data-desc="External and internal coating system for pipeline and industrial pipe assets."><div class="line"></div><div class="visual green" data-label="Pipe"></div><div class="card-body"><h3>Pipe Protection</h3><p>Heavy duty protection for pipeline assets.</p></div></article><article class="card product" data-cat="flooring" data-color="orange" data-title="Flooring System" data-desc="Durable, clean, and high-performance floor coating for industrial facilities."><div class="line"></div><div class="visual orange" data-label="Floor"></div><div class="card-body"><h3>Flooring System</h3><p>Industrial floor coating with clean appearance.</p></div></article></div></div></section>
-<section class="section map-wrap" id="network"><div class="container"><div class="head"><div><span class="badge dark">Clickable Map Pins</span><h2>Domestic network concept</h2></div><p class="copy">Klik pin pada peta. Pin membuka popup network detail.</p></div><div class="map-card"><div class="map"><div class="map-title"><strong>Indonesia Customer Support Network</strong><br><small>Click map pins</small></div><button type="button" class="pin blue" style="left:30%;top:62%" data-title="Head Office & Factory" data-desc="Jakarta / West Java. Corporate communication, technical support, and product inquiry coordination."></button><button type="button" class="pin green" style="left:23%;top:55%" data-title="Sumatra Coverage" data-desc="Industrial and marine inquiry coverage area for Sumatra region."></button><button type="button" class="pin orange" style="left:47%;top:54%" data-title="Java Industrial Area" data-desc="Manufacturing, infrastructure, tank, pipe, and flooring coating support."></button><button type="button" class="pin green" style="left:63%;top:48%" data-title="Kalimantan Project Area" data-desc="Project support for industrial and infrastructure coating applications."></button><button type="button" class="pin orange" style="left:79%;top:53%" data-title="Eastern Indonesia Expansion" data-desc="Future distributor and sales support network for eastern Indonesia."></button></div><div class="map-info"><div class="loc"><strong>Head Office & Factory</strong><p>Corporate communication and technical support.</p></div><div class="loc"><strong>Industrial Coverage</strong><p>Marine, tank, pipe, flooring, and protective coating.</p></div><div class="loc"><strong>Distributor Network</strong><p>Future searchable distributor and sales area.</p></div></div></div></div></section>
-<section class="section inquiry" id="inquiry"><div class="container inquiry-grid"><div><span class="badge">Service Platform</span><h2>Inquiry & technical consultation</h2><p class="copy" style="color:rgba(255,255,255,.78)">Form demo untuk menunjukkan value-added platform. Di versi final masuk ke database CMS.</p><div class="grid3"><div class="box" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18)"><h4 style="color:#fff">1. Inquiry</h4><p>Customer sends needs.</p></div><div class="box" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18)"><h4 style="color:#fff">2. Review</h4><p>Technical team reviews.</p></div><div class="box" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18)"><h4 style="color:#fff">3. Follow-up</h4><p>Sales/support continues.</p></div></div></div><form class="form" id="inq"><h3 style="margin-top:0;color:#082a63;font-size:28px">Tell us about your project</h3><div class="form-grid"><div class="field"><label>Name</label><input required></div><div class="field"><label>Company</label><input></div><div class="field"><label>Email</label><input type="email" required></div><div class="field"><label>WhatsApp</label><input></div><div class="field full"><label>Industry</label><select><option>Marine & Shipping</option><option>Oil & Gas</option><option>Manufacturing</option><option>Infrastructure</option></select></div><div class="field full"><label>Project Need</label><textarea rows="4"></textarea></div><div class="field full"><button class="btn btn-blue" type="submit">Submit Inquiry →</button></div></div></form></div></section>
-<section class="section"><div class="container"><div class="head"><div><span class="badge dark">Meeting Notes</span><h2>FAQ untuk diskusi direktur</h2></div></div><div class="faq"><div class="faq-item open"><button type="button" class="faq-q">Konsep mana yang paling direkomendasikan? <span>⌄</span></button><div class="faq-a">Hybrid: Corporate Identity sebagai wajah utama, Product Showcase dan Customer Service sebagai platform pendukung.</div></div><div class="faq-item"><button type="button" class="faq-q">Apakah bisa bilingual? <span>⌄</span></button><div class="faq-a">Bisa. URL /id dan /en, konten panjang dikelola dari CMS bilingual.</div></div><div class="faq-item"><button type="button" class="faq-q">Apa value added untuk CPI? <span>⌄</span></button><div class="faq-a">Website tidak hanya company profile, tapi juga katalog produk, project records, domestic network, inquiry, dan fondasi digital customer platform.</div></div></div></div></section></main>
-<footer class="footer"><div class="container"><div class="foot"><div><div class="brand"><span class="mark"></span><span><strong style="color:white">PT. CHUGOKU PAINTS INDONESIA</strong><span>Alternative interactive concept</span></span></div><p>Modern, colorful, clickable HTML prototype for director meeting.</p></div><div><h4>Concept</h4><ul><li><a href="#concepts">Corporate</a></li><li><a href="#concepts">Products</a></li><li><a href="#concepts">Services</a></li></ul></div><div><h4>Feature</h4><ul><li><a href="#products">Popup Product</a></li><li><a href="#network">Clickable Map</a></li><li><a href="#inquiry">Inquiry Form</a></li></ul></div><div><h4>Platform</h4><ul><li>CMS</li><li>Bilingual</li><li>Security</li></ul></div><div><h4>Contact</h4><p>Jakarta, Indonesia<br>PT. Chugoku Paints Indonesia</p></div></div><div class="bottom"><span>© 2026 CPI Website Concept Demo</span><span>Prepared for discussion</span></div></div></footer>
-<div class="modal" id="productModal" aria-hidden="true"><div class="modal-box"><div class="modal-head"><h3 id="modalTitle">Product Detail</h3><button type="button" class="modal-close" id="modalClose">×</button></div><div class="modal-content"><div class="modal-visual" id="modalVisual">Product</div><p id="modalDesc"></p><div class="modal-actions"><a class="btn btn-blue" href="#inquiry" id="modalInquiry">Inquire This Product →</a><button type="button" class="btn btn-light" id="modalBrochure">Download Brochure</button></div></div></div></div><div class="map-pop" id="mapPop"><button type="button" id="mapClose">×</button><h3 id="mapTitle">Location</h3><p id="mapDesc"></p></div><div class="toast" id="toast">Demo action completed.</div>
-<script>const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>Array.from(r.querySelectorAll(s));const langText={id:{heroTitle:"3 Arah Website Baru CPI",heroSub:"Prototype HTML modern, berwarna, lebih rame, dan clickable untuk membandingkan konsep identitas perusahaan, produk, dan layanan pelanggan."},en:{heroTitle:"3 Directions for CPI New Website",heroSub:"Modern, colorful, more dynamic, and clickable HTML prototype to compare corporate identity, product-focused, and service-focused concepts."}};function showToast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2600)}document.addEventListener("click",e=>{const c=e.target.closest("[data-concept]");if(c){const k=c.dataset.concept;$$("[data-concept]").forEach(b=>b.classList.toggle("active",b.dataset.concept===k));$$("[data-concept-panel]").forEach(p=>p.classList.toggle("active",p.dataset.conceptPanel===k))}const m=e.target.closest("[data-mock]");if(m){const d={corporate:["Global Quality. Local Commitment.",["Company Profile","Global Network","Project Records"]],products:["Find The Right Coating Product.",["Marine Paints","Tank Coatings","Technical Data"]],services:["Reliable Coatings. Dedicated Support.",["Inquiry Form","Consultation","After-Sales"]]};$$("[data-mock]").forEach(b=>b.classList.toggle("active",b.dataset.mock===m.dataset.mock));$("#mock-title").textContent=d[m.dataset.mock][0];$$(".mockbox").forEach((b,i)=>b.textContent=d[m.dataset.mock][1][i])}const product=e.target.closest(".product");if(product){$("#modalTitle").textContent=product.dataset.title;$("#modalDesc").textContent=product.dataset.desc;$("#modalVisual").textContent=product.dataset.title;$("#modalVisual").style.background=product.dataset.color==="red"?"linear-gradient(135deg,#7a1020,#e71f37)":product.dataset.color==="green"?"linear-gradient(135deg,#0a5943,#19b978)":product.dataset.color==="orange"?"linear-gradient(135deg,#7d4300,#ff8a00)":"linear-gradient(135deg,#0b3d84,#0f6bff)";$("#productModal").classList.add("open");$("#productModal").setAttribute("aria-hidden","false")}if(e.target.id==="modalClose"||e.target.id==="productModal"){$("#productModal").classList.remove("open");$("#productModal").setAttribute("aria-hidden","true")}if(e.target.id==="modalBrochure"){showToast("Demo brochure download. Di versi final file PDF bisa diunduh.")}const pin=e.target.closest(".pin");if(pin){const pop=$("#mapPop");$("#mapTitle").textContent=pin.dataset.title;$("#mapDesc").textContent=pin.dataset.desc;const r=pin.getBoundingClientRect();pop.style.left=Math.min(r.left+28,window.innerWidth-350)+"px";pop.style.top=Math.max(r.top-20,80)+"px";pop.classList.add("open")}if(e.target.id==="mapClose")$("#mapPop").classList.remove("open");const fq=e.target.closest(".faq-q");if(fq)fq.closest(".faq-item").classList.toggle("open")});$$(".filter").forEach(f=>f.addEventListener("click",()=>{const c=f.dataset.filter;$$('.filter').forEach(x=>x.classList.toggle('active',x===f));$$('.product').forEach(p=>p.classList.toggle('hidden',c!=='all'&&p.dataset.cat!==c))}));$$(".lang button").forEach(b=>b.addEventListener("click",()=>{$$(".lang button").forEach(x=>x.classList.toggle("active",x===b));const d=langText[b.dataset.lang];Object.entries(d).forEach(([k,v])=>{const el=$(`[data-i18n="${k}"]`);if(el)el.textContent=v})}));$("#inq").addEventListener("submit",e=>{e.preventDefault();showToast("Inquiry demo berhasil. Di versi final masuk ke database/admin CMS.");e.target.reset()});$("#modalInquiry").addEventListener("click",()=>{$("#productModal").classList.remove("open")});document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("#productModal").classList.remove("open");$("#mapPop").classList.remove("open")}});</script>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <span class="brand-mark"></span>
+        <span>
+          <strong>PT. CHUGOKU PAINTS INDONESIA</strong>
+          <span>Director website concept alternative</span>
+        </span>
+      </a>
+      <nav class="menu">
+        <a href="#directions">Concepts</a>
+        <a href="#comparison">Comparison</a>
+        <a href="#products">Products</a>
+        <a href="#network">Network</a>
+        <a href="#recommendation">Recommendation</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch">
+          <button type="button" class="active" data-lang="id">ID</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a class="btn btn-red" href="#inquiry">Inquiry</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">● Director Meeting Material</span>
+          <h1 class="hero-title" data-i18n="heroTitle">Arah Baru Website CPI yang Lebih Elegan dan Bernilai Bisnis</h1>
+          <p class="hero-copy" data-i18n="heroCopy">Tiga alternatif konsep website untuk membantu direksi memilih arah utama: memperkuat identitas perusahaan, menonjolkan produk, atau membangun komunikasi layanan pelanggan.</p>
+          <div class="hero-actions">
+            <a href="#directions" class="btn btn-primary">Explore Concepts →</a>
+            <a href="#recommendation" class="btn btn-soft">See Recommendation</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="hero-metric"><strong>Global</strong><span>Group identity & trust</span></div>
+            <div class="hero-metric"><strong>Product</strong><span>Coating showcase</span></div>
+            <div class="hero-metric"><strong>Service</strong><span>Customer communication</span></div>
+          </div>
+        </div>
+
+        <aside class="concept-preview">
+          <div class="concept-window">
+            <div class="window-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="window-body">
+              <div class="mock-hero" id="mockHero">
+                <small>PT. Chugoku Paints Indonesia</small>
+                <h3 id="mockTitle">Global quality. Local commitment.</h3>
+              </div>
+              <div class="mock-grid">
+                <div class="mock-card" id="mockCard1">Company Profile</div>
+                <div class="mock-card" id="mockCard2">Global Network</div>
+                <div class="mock-card" id="mockCard3">Project Records</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="concept-selector">
+            <button class="concept-chip active" type="button" data-concept="corporate">
+              <i>🌐</i><span><strong>Corporate Identity</strong><span>Global, trusted, professional.</span></span><b>A</b>
+            </button>
+            <button class="concept-chip" type="button" data-concept="product">
+              <i>🎨</i><span><strong>Product Focused</strong><span>Catalog, application, brochure.</span></span><b>B</b>
+            </button>
+            <button class="concept-chip" type="button" data-concept="service">
+              <i>🤝</i><span><strong>Service Focused</strong><span>Inquiry, support, communication.</span></span><b>C</b>
+            </button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="directions">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow dark">Concept Direction</span>
+            <h2 class="section-title">Tiga pendekatan, satu tujuan: website CPI yang lebih kuat.</h2>
+          </div>
+          <p class="section-copy">Desain dibuat lebih tenang, premium, dan corporate. Warna tetap hidup, tetapi tidak berlebihan, agar nyaman untuk meeting direktur dan tetap cocok dengan karakter industri coating.</p>
+        </div>
+
+        <div class="three-cards">
+          <article class="direction-card">
+            <span class="direction-no">A</span>
+            <h3>Corporate Identity & Global Network</h3>
+            <p>Menonjolkan reputasi CPI sebagai bagian dari jaringan global Chugoku Marine Paints Group.</p>
+            <ul class="direction-list">
+              <li>Company profile yang kuat</li>
+              <li>Global & domestic network</li>
+              <li>Project records dan sustainability</li>
+            </ul>
+          </article>
+
+          <article class="direction-card red">
+            <span class="direction-no">B</span>
+            <h3>Product-Focused Website</h3>
+            <p>Mengubah website menjadi katalog digital produk coating yang informatif dan mudah dipahami customer.</p>
+            <ul class="direction-list">
+              <li>Product category & application</li>
+              <li>Brochure / TDS / SDS ready</li>
+              <li>Product inquiry by category</li>
+            </ul>
+          </article>
+
+          <article class="direction-card teal">
+            <span class="direction-no">C</span>
+            <h3>Service & Customer Communication</h3>
+            <p>Menjadikan website sebagai pintu komunikasi customer untuk konsultasi coating dan project support.</p>
+            <ul class="direction-list">
+              <li>Inquiry and consultation form</li>
+              <li>Technical support flow</li>
+              <li>Domestic support map</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="comparison">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow dark">Interactive Comparison</span>
+            <h2 class="section-title">Klik konsep untuk melihat fokus dan konsekuensinya.</h2>
+          </div>
+          <p class="section-copy">Bagian ini bisa dipakai saat presentasi. Direktur dapat melihat bahwa setiap arah punya nilai bisnis dan risiko yang berbeda.</p>
+        </div>
+
+        <div class="compare-wrap">
+          <aside class="compare-tabs">
+            <button class="compare-tab active" type="button" data-panel="corporate">
+              <i>🌐</i><span><strong>Corporate Identity</strong><small>Citra perusahaan, global network, trust.</small></span>
+            </button>
+            <button class="compare-tab" type="button" data-panel="product">
+              <i>🎨</i><span><strong>Product Focused</strong><small>Katalog produk, aplikasi, technical document.</small></span>
+            </button>
+            <button class="compare-tab" type="button" data-panel="service">
+              <i>🤝</i><span><strong>Service Focused</strong><small>Inquiry, consultation, customer communication.</small></span>
+            </button>
+          </aside>
+
+          <article class="compare-panel active" data-panel-content="corporate">
+            <div class="panel-hero">
+              <span class="eyebrow">Concept A</span>
+              <h3>Website corporate yang terlihat global, stabil, dan terpercaya.</h3>
+            </div>
+            <div class="panel-body">
+              <div class="pill-row"><span class="pill">Company Profile</span><span class="pill">Global Network</span><span class="pill">Domestic Map</span><span class="pill">Project Records</span></div>
+              <div class="pros-grid">
+                <div class="mini-box"><h4>Kelebihan</h4><ul><li>Paling cocok untuk direktur dan HO Jepang</li><li>Meningkatkan kepercayaan customer besar</li><li>Memberi kesan perusahaan kuat dan mapan</li></ul></div>
+                <div class="mini-box"><h4>Catatan</h4><ul><li>Detail produk harus tetap diberi ruang khusus</li><li>Jangan sampai terlalu umum seperti company profile biasa</li></ul></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="compare-panel" data-panel-content="product">
+            <div class="panel-hero product">
+              <span class="eyebrow">Concept B</span>
+              <h3>Website produk yang membantu customer menemukan coating yang tepat.</h3>
+            </div>
+            <div class="panel-body">
+              <div class="pill-row"><span class="pill">Product Catalog</span><span class="pill">Application</span><span class="pill">TDS/SDS</span><span class="pill">Product Inquiry</span></div>
+              <div class="pros-grid">
+                <div class="mini-box"><h4>Kelebihan</h4><ul><li>Mendukung sales dan marketing</li><li>Memudahkan customer mencari produk</li><li>Lebih kuat untuk SEO produk</li></ul></div>
+                <div class="mini-box"><h4>Catatan</h4><ul><li>Butuh data produk yang rapi</li><li>Corporate story tetap perlu dipertahankan</li></ul></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="compare-panel" data-panel-content="service">
+            <div class="panel-hero service">
+              <span class="eyebrow">Concept C</span>
+              <h3>Website layanan yang komunikatif dan dekat dengan kebutuhan customer.</h3>
+            </div>
+            <div class="panel-body">
+              <div class="pill-row"><span class="pill">Inquiry Form</span><span class="pill">Technical Support</span><span class="pill">Follow-up Flow</span><span class="pill">Network Coverage</span></div>
+              <div class="pros-grid">
+                <div class="mini-box"><h4>Kelebihan</h4><ul><li>Paling komunikatif dengan customer</li><li>Dapat menjadi lead generation</li><li>Mendukung konsultasi teknis coating</li></ul></div>
+                <div class="mini-box"><h4>Catatan</h4><ul><li>Perlu SOP follow-up internal</li><li>Inquiry harus dikelola dari admin CMS</li></ul></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="live">
+      <div class="container demo-layout">
+        <div>
+          <span class="eyebrow">Live Simulation</span>
+          <h2 class="section-title">Simulasi cepat arah homepage.</h2>
+          <p class="section-copy">Klik salah satu pilihan untuk melihat perubahan headline dan struktur konten utama. Ini membantu menjelaskan perbedaan arah website tanpa terlalu teknis.</p>
+          <div class="demo-controls">
+            <button class="demo-control active" type="button" data-demo="corporate"><strong>Corporate Identity</strong><small>Global quality, company trust, network.</small></button>
+            <button class="demo-control" type="button" data-demo="product"><strong>Product Focused</strong><small>Product category, brochure, application.</small></button>
+            <button class="demo-control" type="button" data-demo="service"><strong>Service Focused</strong><small>Inquiry, consultation, after-sales support.</small></button>
+          </div>
+        </div>
+
+        <div class="demo-browser">
+          <div class="browser-inner">
+            <div class="window-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="browser-body">
+              <div class="preview-block" id="previewBlock">
+                <small>PT. Chugoku Paints Indonesia</small>
+                <h3 id="previewTitle">Global quality. Local commitment.</h3>
+              </div>
+              <div class="preview-cards">
+                <div class="preview-card" id="preview1">Company Profile</div>
+                <div class="preview-card" id="preview2">Global Network</div>
+                <div class="preview-card" id="preview3">Project Records</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products" id="products">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow dark">Product Interaction</span>
+            <h2 class="section-title">Product showcase yang bersih, tidak ramai berlebihan.</h2>
+          </div>
+          <p class="section-copy">Klik produk untuk melihat popup detail. Ini menggambarkan bagaimana katalog produk CPI bisa dibuat modern namun tetap corporate.</p>
+        </div>
+
+        <div class="filter-row">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="marine">Marine</button>
+          <button class="filter-btn" type="button" data-filter="industrial">Industrial</button>
+          <button class="filter-btn" type="button" data-filter="flooring">Flooring</button>
+        </div>
+
+        <div class="product-grid">
+          <button class="product-card" type="button" data-category="marine" data-color="blue" data-title="Marine Paints" data-desc="Antifouling, topcoat, and coating system for vessel protection in marine environments.">
+            <div class="product-line"></div><div class="product-visual" data-label="Marine"></div>
+            <div class="product-body"><h3>Marine Paints</h3><p>Protection for ships and offshore application.</p></div>
+          </button>
+          <button class="product-card" type="button" data-category="industrial" data-color="red" data-title="Tank Coatings" data-desc="Chemical resistant lining and coating system for industrial storage tanks.">
+            <div class="product-line"></div><div class="product-visual red" data-label="Tank"></div>
+            <div class="product-body"><h3>Tank Coatings</h3><p>Chemical resistant protection for storage tanks.</p></div>
+          </button>
+          <button class="product-card" type="button" data-category="industrial" data-color="teal" data-title="Pipe Protection" data-desc="External and internal coating system for pipeline and industrial pipe assets.">
+            <div class="product-line"></div><div class="product-visual teal" data-label="Pipe"></div>
+            <div class="product-body"><h3>Pipe Protection</h3><p>Heavy duty protection for pipeline assets.</p></div>
+          </button>
+          <button class="product-card" type="button" data-category="flooring" data-color="gold" data-title="Flooring System" data-desc="Durable, clean, and high-performance floor coating for industrial facilities.">
+            <div class="product-line"></div><div class="product-visual gold" data-label="Floor"></div>
+            <div class="product-body"><h3>Flooring System</h3><p>Industrial floor coating with clean appearance.</p></div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section network" id="network">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow dark">Domestic Network</span>
+            <h2 class="section-title">Clickable network map yang lebih halus dan informatif.</h2>
+          </div>
+          <p class="section-copy">Pin pada map dapat diklik. Konsep ini cocok untuk menjelaskan kantor, factory, distributor, coverage area, dan support point di Indonesia.</p>
+        </div>
+
+        <div class="network-card">
+          <div class="map">
+            <div class="map-title"><strong>Indonesia Customer Support Network</strong><small>Click each pin to preview detail</small></div>
+            <button class="pin blue" type="button" style="left:30%;top:62%" data-title="Head Office & Factory" data-desc="Jakarta / West Java. Corporate communication, product inquiry, and technical support coordination."></button>
+            <button class="pin teal" type="button" style="left:23%;top:55%" data-title="Sumatra Coverage" data-desc="Industrial and marine coating inquiry coverage area for Sumatra region."></button>
+            <button class="pin gold" type="button" style="left:47%;top:54%" data-title="Java Industrial Area" data-desc="Manufacturing, infrastructure, tank, pipe, and flooring support coverage."></button>
+            <button class="pin teal" type="button" style="left:63%;top:48%" data-title="Kalimantan Project Area" data-desc="Project support for industrial and infrastructure coating applications."></button>
+            <button class="pin gold" type="button" style="left:79%;top:53%" data-title="Eastern Indonesia Expansion" data-desc="Future distributor and sales support network for eastern Indonesia."></button>
+          </div>
+          <div class="network-list">
+            <div class="network-item"><strong>Head Office & Factory</strong><p>Corporate communication, product inquiry, and technical support.</p></div>
+            <div class="network-item"><strong>Industrial Coverage</strong><p>Marine, tank, pipe, flooring, infrastructure, and protective coating.</p></div>
+            <div class="network-item"><strong>Distributor Network</strong><p>Future searchable distributor and sales area inside CMS.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section recommendation" id="recommendation">
+      <div class="container">
+        <div class="recommend-card">
+          <div>
+            <span class="eyebrow">Recommended Direction</span>
+            <h2 class="section-title">Corporate Identity sebagai wajah utama, Product & Service sebagai platform pendukung.</h2>
+            <p>Untuk CPI, pendekatan terbaik bukan memilih satu konsep secara ekstrem. Website sebaiknya tampil corporate dan terpercaya, tetapi tetap menyediakan katalog produk, project records, network map, dan customer inquiry.</p>
+            <a class="btn btn-soft" href="#inquiry">Continue to Inquiry Demo →</a>
+          </div>
+          <div class="recommend-list">
+            <div class="recommend-item"><strong>Corporate trust</strong><span>Menunjukkan reputasi, jaringan global, dan identitas perusahaan.</span></div>
+            <div class="recommend-item"><strong>Product clarity</strong><span>Memudahkan customer memahami kategori dan aplikasi produk.</span></div>
+            <div class="recommend-item"><strong>Customer communication</strong><span>Inquiry dan technical consultation bisa masuk ke CMS/admin.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section inquiry" id="inquiry">
+      <div class="container inquiry-grid">
+        <div>
+          <span class="eyebrow">Service Platform</span>
+          <h2 class="section-title">Inquiry & technical consultation.</h2>
+          <p class="section-copy">Form ini hanya demo clickable. Pada versi CI4 final, data inquiry bisa masuk ke database dan dikelola dari admin CMS.</p>
+          <div class="process-grid">
+            <div class="process"><strong>1. Inquiry</strong><span>Customer submits project needs.</span></div>
+            <div class="process"><strong>2. Review</strong><span>Sales/technical team reviews requirement.</span></div>
+            <div class="process"><strong>3. Follow-up</strong><span>Team provides recommendation and quotation.</span></div>
+          </div>
+        </div>
+        <form class="form-card" id="inquiryForm">
+          <h3>Tell us about your project</h3>
+          <div class="form-grid">
+            <div class="field"><label>Name</label><input required placeholder="Your name"></div>
+            <div class="field"><label>Company</label><input placeholder="Company name"></div>
+            <div class="field"><label>Email</label><input type="email" required placeholder="name@email.com"></div>
+            <div class="field"><label>Phone / WhatsApp</label><input placeholder="+62"></div>
+            <div class="field full"><label>Industry</label><select><option>Marine & Shipping</option><option>Oil & Gas</option><option>Manufacturing</option><option>Infrastructure</option></select></div>
+            <div class="field full"><label>Project Need</label><textarea rows="4" placeholder="Describe surface, environment, and requirement"></textarea></div>
+            <div class="field full"><button class="btn btn-primary" type="submit">Submit Inquiry →</button></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow dark">Meeting Notes</span>
+            <h2 class="section-title">Poin diskusi yang bisa dibuka saat meeting.</h2>
+          </div>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item open"><button class="faq-q" type="button">Konsep mana yang paling direkomendasikan? <span>⌄</span></button><div class="faq-a">Hybrid: Corporate Identity sebagai wajah utama, Product Showcase dan Customer Service sebagai platform pendukung.</div></div>
+          <div class="faq-item"><button class="faq-q" type="button">Apakah bisa bilingual? <span>⌄</span></button><div class="faq-a">Bisa. Struktur URL dapat dibuat /id dan /en, sedangkan konten panjang dikelola dari CMS bilingual.</div></div>
+          <div class="faq-item"><button class="faq-q" type="button">Apa value-added untuk CPI? <span>⌄</span></button><div class="faq-a">Website tidak hanya company profile, tetapi juga menjadi product showcase, project records, domestic network, inquiry, dan fondasi digital customer platform.</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="brand"><span class="brand-mark"></span><span><strong style="color:#fff">PT. CHUGOKU PAINTS INDONESIA</strong><span>Alternative website concept</span></span></div><p>Elegant, modern, dynamic, and clickable prototype for director meeting discussion.</p></div>
+        <div><h4>Concept</h4><ul><li><a href="#directions">Corporate</a></li><li><a href="#directions">Product</a></li><li><a href="#directions">Service</a></li></ul></div>
+        <div><h4>Feature</h4><ul><li><a href="#products">Product Popup</a></li><li><a href="#network">Network Map</a></li><li><a href="#inquiry">Inquiry Form</a></li></ul></div>
+        <div><h4>Platform</h4><ul><li>Bilingual CMS</li><li>Security</li><li>Admin Panel</li></ul></div>
+        <div><h4>Meeting</h4><p>Prepared as visual alternative for CPI new website direction discussion.</p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 CPI Website Concept Demo</span><span>Prepared for discussion</span></div>
+    </div>
+  </footer>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-box">
+      <div class="modal-head"><h3 id="modalTitle">Product Detail</h3><button class="modal-close" id="modalClose" type="button">×</button></div>
+      <div class="modal-content">
+        <div class="modal-visual" id="modalVisual">Product</div>
+        <p id="modalDesc"></p>
+        <div class="modal-actions"><a href="#inquiry" class="btn btn-primary" id="modalInquiry">Inquire This Product →</a><button class="btn btn-soft" id="modalBrochure" type="button">Download Brochure</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-pop" id="mapPop"><button type="button" id="mapClose">×</button><h3 id="mapTitle">Location</h3><p id="mapDesc"></p></div>
+  <div class="toast" id="toast">Demo action completed.</div>
+
+  <script>
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+
+    const langText = {
+      id: {
+        heroTitle: 'Arah Baru Website CPI yang Lebih Elegan dan Bernilai Bisnis',
+        heroCopy: 'Tiga alternatif konsep website untuk membantu direksi memilih arah utama: memperkuat identitas perusahaan, menonjolkan produk, atau membangun komunikasi layanan pelanggan.'
+      },
+      en: {
+        heroTitle: 'A More Elegant and Business-Driven Direction for CPI Website',
+        heroCopy: 'Three website concept alternatives to help directors choose the main direction: strengthen corporate identity, highlight products, or build customer service communication.'
+      }
+    };
+
+    const demoData = {
+      corporate: {
+        title: 'Global quality. Local commitment.',
+        cards: ['Company Profile', 'Global Network', 'Project Records'],
+        bg: 'linear-gradient(135deg, #0b2f63, #1667d9)'
+      },
+      product: {
+        title: 'Find the right coating solution.',
+        cards: ['Marine Paints', 'Tank Coatings', 'Technical Data'],
+        bg: 'linear-gradient(135deg, #6d1421, #d91f35)'
+      },
+      service: {
+        title: 'Reliable coating support for every project.',
+        cards: ['Inquiry Form', 'Consultation', 'After-Sales'],
+        bg: 'linear-gradient(135deg, #0f4d55, #1aa6a6)'
+      }
+    };
+
+    function showToast(message) {
+      const toast = $('#toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2800);
+    }
+
+    function applyPreview(type, targetPrefix = 'mock') {
+      const data = demoData[type];
+      if (!data) return;
+
+      const title = targetPrefix === 'preview' ? $('#previewTitle') : $('#mockTitle');
+      const hero = targetPrefix === 'preview' ? $('#previewBlock') : $('#mockHero');
+      const cards = targetPrefix === 'preview'
+        ? [$('#preview1'), $('#preview2'), $('#preview3')]
+        : [$('#mockCard1'), $('#mockCard2'), $('#mockCard3')];
+
+      title.textContent = data.title;
+      hero.style.background = data.bg;
+      cards.forEach((card, index) => card.textContent = data.cards[index]);
+    }
+
+    $$('[data-concept]').forEach(button => {
+      button.addEventListener('click', () => {
+        const type = button.dataset.concept;
+        $$('[data-concept]').forEach(item => item.classList.toggle('active', item.dataset.concept === type));
+        applyPreview(type, 'mock');
+      });
+    });
+
+    $$('[data-panel]').forEach(button => {
+      button.addEventListener('click', () => {
+        const panel = button.dataset.panel;
+        $$('[data-panel]').forEach(item => item.classList.toggle('active', item.dataset.panel === panel));
+        $$('[data-panel-content]').forEach(item => item.classList.toggle('active', item.dataset.panelContent === panel));
+      });
+    });
+
+    $$('[data-demo]').forEach(button => {
+      button.addEventListener('click', () => {
+        const type = button.dataset.demo;
+        $$('[data-demo]').forEach(item => item.classList.toggle('active', item.dataset.demo === type));
+        applyPreview(type, 'preview');
+      });
+    });
+
+    $$('[data-lang]').forEach(button => {
+      button.addEventListener('click', () => {
+        const lang = button.dataset.lang;
+        $$('[data-lang]').forEach(item => item.classList.toggle('active', item.dataset.lang === lang));
+        Object.entries(langText[lang]).forEach(([key, value]) => {
+          const element = document.querySelector(`[data-i18n="${key}"]`);
+          if (element) element.textContent = value;
+        });
+      });
+    });
+
+    $$('.filter-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.dataset.filter;
+        $$('.filter-btn').forEach(item => item.classList.toggle('active', item === button));
+        $$('.product-card').forEach(card => {
+          card.classList.toggle('is-hidden', category !== 'all' && card.dataset.category !== category);
+        });
+      });
+    });
+
+    $$('.product-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const modal = $('#productModal');
+        const visual = $('#modalVisual');
+        $('#modalTitle').textContent = card.dataset.title;
+        $('#modalDesc').textContent = card.dataset.desc;
+        visual.textContent = card.dataset.title;
+        const color = card.dataset.color;
+        visual.style.background = color === 'red'
+          ? 'linear-gradient(135deg, #6d1421, #d91f35)'
+          : color === 'teal'
+            ? 'linear-gradient(135deg, #0f4d55, #1aa6a6)'
+            : color === 'gold'
+              ? 'linear-gradient(135deg, #6d4518, #c9963c)'
+              : 'linear-gradient(135deg, #092b5c, #1667d9)';
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    $('#modalClose').addEventListener('click', () => closeModal());
+    $('#productModal').addEventListener('click', event => { if (event.target.id === 'productModal') closeModal(); });
+    $('#modalBrochure').addEventListener('click', () => showToast('Demo brochure download. In final CMS, this button can download product PDF.'));
+    $('#modalInquiry').addEventListener('click', () => closeModal());
+
+    function closeModal() {
+      const modal = $('#productModal');
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    $$('.pin').forEach(pin => {
+      pin.addEventListener('click', () => {
+        const pop = $('#mapPop');
+        const rect = pin.getBoundingClientRect();
+        $('#mapTitle').textContent = pin.dataset.title;
+        $('#mapDesc').textContent = pin.dataset.desc;
+        pop.style.left = `${Math.min(rect.left + 30, window.innerWidth - 360)}px`;
+        pop.style.top = `${Math.max(rect.top - 20, 82)}px`;
+        pop.classList.add('open');
+      });
+    });
+
+    $('#mapClose').addEventListener('click', () => $('#mapPop').classList.remove('open'));
+
+    $$('.faq-q').forEach(button => {
+      button.addEventListener('click', () => button.closest('.faq-item').classList.toggle('open'));
+    });
+
+    $('#inquiryForm').addEventListener('submit', event => {
+      event.preventDefault();
+      showToast('Inquiry demo berhasil. Pada versi final, data masuk ke database/admin CMS.');
+      event.target.reset();
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        closeModal();
+        $('#mapPop').classList.remove('open');
+      }
+    });
+  </script>
 </body>
 </html>
